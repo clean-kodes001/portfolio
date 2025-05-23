@@ -1,5 +1,4 @@
 
-import { StaticImageData } from "react-router-dom";
 
 export interface Skill {
   name: string;
@@ -31,6 +30,8 @@ export interface Project {
   link?: {
     live?: string;
     github?: string;
+    type?: string;
+    website?: string;
   };
   featured: boolean;
 }
@@ -53,34 +54,34 @@ export interface Education {
 // Main configuration for the portfolio
 export const portfolioConfig = {
   // Personal Info
-  name: "John Doe",
+  name: "Dickson Miracle",
   title: "Software Developer",
-  email: "hello@johndoe.dev",
-  location: "San Francisco, CA",
+  email: "anoibidickson@gmail.com",
+  location: "Minna, Niger State",
   bio: "I'm a passionate software developer specializing in building exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.",
-  about: `I'm a fullstack developer with over 5 years of experience in designing and implementing scalable applications.
+  about: `I'm a fullstack developer with over 7 years of experience in designing and implementing scalable applications.
   I love solving complex problems with clean, efficient code, and I'm always eager to learn new technologies. 
   When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes.`,
   
   // Resume/CV
-  resumeLink: "https://example.com/resume.pdf",
+  resumeLink: "/resume.pdf",
   
   // Social Links
   socialLinks: [
     {
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/Dickson2020",
       icon: "github"
     },
     {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
-      icon: "linkedin"
+      name: "Whatsapp",
+      url: "https://wa.me/+2348146360057",
+      icon: "whatsapp"
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
-      icon: "twitter"
+      name: "Facebook",
+      url: "https://web.facebook.com/profile.php?id=100070429810693",
+      icon: "facebook"
     }
   ] as SocialLink[],
   
@@ -90,27 +91,26 @@ export const portfolioConfig = {
       category: "Frontend",
       skills: [
         { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
+        { name: "ReactNative", level: 90 },
+        { name: "Java Mobile Android", level: 85 },
         { name: "Next.js", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
       ]
     },
     {
       category: "Backend",
       skills: [
         { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "MongoDB", level: 75 },
         { name: "PostgreSQL", level: 70 },
+        { name: "Mysql", level: 90 },
+        { name: "Php", level: 97 },
       ]
     },
     {
       category: "Other",
       skills: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
-        { name: "CI/CD", level: 75 },
+        { name: "AI Automation", level: 70 },
+        { name: "Java & Android Studio Mobile Development", level: 70 },
       ]
     }
   ] as SkillCategory[],
@@ -118,137 +118,121 @@ export const portfolioConfig = {
   // Experience
   experiences: [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Innovators Inc.",
-      location: "San Francisco, CA",
-      startDate: "Jan 2021",
+      title: "Senior Frontend & Backend Developer",
+      company: "Coinly Limited",
+      location: "Minna, Nigeria",
+      startDate: "Nov 2024",
       endDate: "Present",
-      description: "Lead developer for the company's flagship product",
+      description: "Lead developer for the company's offical mobile app",
       bullets: [
-        "Developed and maintained major features of the company's flagship product",
-        "Led a team of 3 developers to deliver projects on time and within scope",
-        "Implemented new React architecture resulting in 35% performance improvement",
-        "Improved application testing with Jest, increasing coverage from 45% to 80%"
-      ],
-      skills: ["React", "TypeScript", "Redux", "Jest", "Webpack"]
+        "Developed and maintained major features of the company's mobile app using React Native and TypeScript",
+        "Collaborated with designers and backend developers to create a seamless user experience",
+        "Optimized app performance and reduced load times by 25% through code splitting and lazy loading",
+        "Implemented unit and integration tests using Jest and React Testing Library, increasing code coverage to 85%",
+        "Mentored junior developers and conducted code reviews to ensure best practices"],
+      skills: ["React Native", "TypeScript", "Redux", "MYSQL", "PHP"]
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Solutions LLC",
-      location: "Austin, TX",
-      startDate: "Mar 2018",
-      endDate: "Dec 2020",
-      description: "Built responsive web applications for various clients",
+      title: "Frontend & Backend Developer",
+      company: "Cheepay payment solutions",
+      location: "Minna, Niger state",
+      startDate: "Oct 2023",
+      endDate: "Present",
+      description: "Built responsive web & mobile applications for the company's payment solutions.",
       bullets: [
-        "Built responsive web applications with React and Next.js for 15+ clients",
-        "Collaborated with UX designers to implement pixel-perfect interfaces",
-        "Reduced bundle size by 40% through code splitting and lazy loading",
-        "Participated in code reviews and mentored junior developers"
+        "Developed and maintained the mobile application using React Native, PHP for server side & API, and Mysql for robust database",
+        "Worked closely with the design team to ensure a consistent and user-friendly interface",
+        "Integrated third-party APIs for payment processing and data visualization",
+
+       
       ],
-      skills: ["React", "JavaScript", "CSS3", "HTML5"]
+      skills: ["React Native", "JavaScript", "CSS3", "HTML5", "PHP", "MYSQL"]
     },
-    {
-      title: "Web Developer Intern",
-      company: "StartUp Vision",
-      location: "Remote",
-      startDate: "Jun 2017",
-      endDate: "Feb 2018",
-      description: "Assisted in developing company website and internal tools",
-      bullets: [
-        "Assisted in developing company website and internal tools",
-        "Implemented responsive designs for mobile and tablet devices",
-        "Fixed bugs and improved site performance by 25%",
-        "Collaborated with the marketing team to improve user engagement"
-      ],
-      skills: ["JavaScript", "HTML", "CSS", "jQuery"]
-    }
+  
   ] as Experience[],
   
   // Projects
   projects: [
     {
-      id: "project-1",
-      title: "E-commerce Platform",
-      description: "A full-featured e-commerce platform with shopping cart, payment processing, and inventory management.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/placeholder.svg",
+      id: "coinly",
+      title: "Coinly Mobile App",
+      description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
+      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      image: "/WhatsApp Image 2025-05-23 at 14.23.13_b6f6f687.jpg",
       link: {
-        live: "https://example.com/project1",
-        github: "https://github.com/username/project1"
+        live: "https://expo.dev/artifacts/eas/pqa6hrJmFf8KyyVC5en6bh.apk",
+        website: "https://thecoinlyapp.com",
+        text:'Download app'
       },
       featured: true
     },
     {
-      id: "project-2",
-      title: "Task Management App",
-      description: "A Kanban-style task management application with drag-and-drop functionality and user authentication.",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      image: "/placeholder.svg",
+      id: "yesatt",
+      title: "Yesatt Ride Share (Web, IOS, Android App) - U.S.A Client",
+      description: "A ride-sharing platform that connects drivers and passengers for convenient transportation.",
+      tags: ["React Native", "NODEJS", "POSTGRES DATABASE","TypeScript", "HTML5", "CSS3"],
+      image: "/Screenshot_29-4-2025_81651_lovable.dev.jpg",
       link: {
-        live: "https://example.com/project2",
-        github: "https://github.com/username/project2"
+        live: "https://yesatt.com",
+        website: "https://yesatt.com",
+        text:'Download app(DM for Download link)'
+      },
+      featured: true
+    },
+    ,
+    {
+      id: "dji-drone-app",
+      title: "IOT Based DJI Drone App Android App",
+      description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
+      tags: ["Java", "PHP", "Mysql DATABASE","Android"],
+      image: "/dji.jpg",
+      link: {
+        live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
+        text:'Download app(DM for Demo Download - 130MB size )'
       },
       featured: true
     },
     {
-      id: "project-3",
-      title: "Weather Dashboard",
-      description: "A weather forecasting dashboard that visualizes data from multiple sources with interactive charts.",
-      tags: ["TypeScript", "Chart.js", "API Integration"],
-      image: "/placeholder.svg",
+      id: "cheepay",
+      title: "Cheepay Mobile App",
+      description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
+      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      image: "/cheepay.gif",
       link: {
-        github: "https://github.com/username/project3"
+        live: "https://expo.dev/artifacts/eas/uVyCMAzJ28DoTmxHxDP6V1.apk",
+        website: "https://cheepayapp.top",
+        type:'Download app'
       },
       featured: true
     },
-    {
-      id: "project-4",
-      title: "Personal Finance Tracker",
-      description: "A finance tracking application that helps users monitor expenses and visualize spending patterns.",
-      tags: ["React", "D3.js", "PostgreSQL", "Express"],
-      image: "/placeholder.svg",
-      link: {
-        live: "https://example.com/project4",
-      },
-      featured: false
-    },
-    {
-      id: "project-5",
-      title: "Social Media Dashboard",
-      description: "A dashboard for social media managers to monitor and analyze engagement across multiple platforms.",
-      tags: ["React", "Redux", "Node.js", "OAuth"],
-      image: "/placeholder.svg",
-      link: {
-        github: "https://github.com/username/project5"
-      },
-      featured: false
-    }
+   
+   
   ] as Project[],
   
   // Education
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      location: "San Francisco, CA",
-      startDate: "Sep 2013",
-      endDate: "May 2017",
-      description: "Graduated with honors. Focused on web development and databases."
+      degree: "Bachelor of Technology in Computer Science",
+      institution: "Federal University of Technology",
+      location: "Minna, Niger State, Nigeria",
+      startDate: "Nov 2019",
+      endDate: "Feb 2035",
+      description: "Graduated with 2nd class honors. Focused on software engineering, problem solving and database design."
     },
     {
-      degree: "Full-Stack Web Development Bootcamp",
+      degree: "W3Scools Full-Stack Web Development Bootcamp",
       institution: "Coding Academy",
       location: "Online",
-      startDate: "Jan 2018",
-      endDate: "Apr 2018",
+      startDate: "Jan 2017",
+      endDate: "Present",
       description: "Intensive program covering modern web development technologies."
     }
   ] as Education[],
   
   // Contact Info
   contactInfo: {
-    email: "hello@johndoe.dev",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA"
+    email: "anoibidickson@gmail.com",
+    phone: "+234 814 636 0057",
+    location: "Minna, Niger"
   }
 };

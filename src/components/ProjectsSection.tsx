@@ -111,16 +111,16 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground">{project.description}</p>
               </CardContent>
               <CardFooter className="flex gap-2">
-                {project.link?.github && (
+                {project.link?.website && (
                   <Button asChild variant="outline" size="sm">
                     <a 
-                      href={project.link.github} 
+                      href={project.link.website} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-1"
                     >
-                      <Github size={16} />
-                      <span>Code</span>
+                      <ExternalLink size={16} />
+                      <span>Visit website</span>
                     </a>
                   </Button>
                 )}
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
                       className="flex items-center gap-1"
                     >
                       <ExternalLink size={16} />
-                      <span>Demo</span>
+                      <span>{project.link.type} </span>
                     </a>
                   </Button>
                 )}

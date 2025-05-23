@@ -44,7 +44,11 @@ const HeroSection = () => {
           <div className="relative w-56 h-56 md:w-80 md:h-80 bg-gradient-to-br from-portfolio-300 to-portfolio-600 rounded-full overflow-hidden opacity-0 animate-scale">
             {/* This is a placeholder for a profile image */}
             <div className="absolute inset-1 bg-background rounded-full flex items-center justify-center text-9xl font-bold text-portfolio-600">
-              {portfolioConfig.name.charAt(0)}
+              <img
+                src="/profile.jpg" // Replace with your image path
+                alt={portfolioConfig.name}
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </div>
         </div>

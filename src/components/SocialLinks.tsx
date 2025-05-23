@@ -1,13 +1,13 @@
 
 import React from 'react';
 import { portfolioConfig } from '../config/portfolio';
-import { Github, Linkedin, Twitter, Instagram, Globe } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Globe, MessageCircleIcon, FacebookIcon } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={20} />,
-  linkedin: <Linkedin size={20} />,
+  whatsapp: <MessageCircleIcon size={20} />,
   twitter: <Twitter size={20} />,
-  instagram: <Instagram size={20} />,
+  facebook: <FacebookIcon size={20} />,
   website: <Globe size={20} />
 };
 
