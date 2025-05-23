@@ -133,7 +133,7 @@ const ProjectsSection = () => {
                       className="flex items-center gap-1"
                     >
                       <ExternalLink size={16} />
-                      <span>{project.link.type} </span>
+                      <span>{project.link.text} </span>
                     </a>
                   </Button>
                 )}

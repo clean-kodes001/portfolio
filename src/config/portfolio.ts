@@ -30,7 +30,7 @@ export interface Project {
   link?: {
     live?: string;
     github?: string;
-    type?: string;
+    text?: string;
     website?: string;
   };
   featured: boolean;
@@ -158,7 +158,7 @@ export const portfolioConfig = {
       title: "Coinly Mobile App",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
-      image: "/WhatsApp Image 2025-05-23 at 14.23.13_b6f6f687.jpg",
+      image: "/coinly.jpg",
       link: {
         live: "https://expo.dev/artifacts/eas/pqa6hrJmFf8KyyVC5en6bh.apk",
         website: "https://thecoinlyapp.com",
@@ -185,7 +185,7 @@ export const portfolioConfig = {
       title: "IOT Based DJI Drone App Android App",
       description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
       tags: ["Java", "PHP", "Mysql DATABASE","Android"],
-      image: "/dji.jpg",
+      image: "/dji-app.jpg",
       link: {
         live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
         text:'Download app(DM for Demo Download - 130MB size )'
@@ -201,7 +201,7 @@ export const portfolioConfig = {
       link: {
         live: "https://expo.dev/artifacts/eas/uVyCMAzJ28DoTmxHxDP6V1.apk",
         website: "https://cheepayapp.top",
-        type:'Download app'
+        text:'Download app'
       },
       featured: true
     },
