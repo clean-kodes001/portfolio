@@ -174,8 +174,8 @@ export const portfolioConfig = {
       image: "/Screenshot_29-4-2025_81651_lovable.dev.jpg",
       link: {
         live: "https://yesatt.com",
-        website: "https://yesatt.com",
-        text:'Download app(DM for Download link)'
+        website: "https://wa.me/+2348146360057",
+        text:'Get Demo(Whatsapp)'
       },
       featured: true
     },
@@ -188,7 +188,7 @@ export const portfolioConfig = {
       image: "/dji-app.jpg",
       link: {
         live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
-        text:'Download app(DM for Demo Download - 130MB size )'
+        text:'Request For Demo(Whatsapp)'
       },
       featured: true
     },

@@ -29,10 +29,7 @@ const Header = () => {
       <div className="container-wide flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tighter text-portfolio-600">
-            {portfolioConfig.name.split(' ')[0]}
-            <span className="text-foreground">
-              {portfolioConfig.name.split(' ').slice(1).join(' ')}
-            </span>
+          {' Miracle</>'}
           </span>
         </div>
         
