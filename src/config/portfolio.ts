@@ -172,8 +172,8 @@ export const portfolioConfig = {
       tags: ["React Native", "NODEJS", "POSTGRES DATABASE","TypeScript", "HTML5", "CSS3"],
       image: "/Screenshot_29-4-2025_81651_lovable.dev.jpg",
       link: {
-        live: "https://yesatt.com",
-        website: "https://wa.me/+2348146360057",
+        website: "https://yesatt.com",
+        live: "https://wa.me/+2348146360057",
         text:'Get Demo(Whatsapp)'
       },
       featured: true
