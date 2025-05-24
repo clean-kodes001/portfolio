@@ -159,7 +159,7 @@ export const portfolioConfig = {
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
       link: {
-        live: "https://expo.dev/artifacts/eas/pqa6hrJmFf8KyyVC5en6bh.apk",
+        live: "https://expo.dev/artifacts/eas/crRC9GCd6GTaBKyJ7bDsAV.apk",
         website: "https://thecoinlyapp.com",
         text:'Download app'
       },
