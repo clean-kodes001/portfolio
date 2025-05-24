@@ -11,12 +11,7 @@ const HeroSection = () => {
       <div className="container-wide grid md:grid-cols-5 gap-8 items-center">
         <div className="md:col-span-3 space-y-6">
           <div className="space-y-4">
-            <h2 className="text-portfolio-600 font-medium text-lg md:text-xl opacity-0 animate-fade-in">
-              Hello, my name is
-            </h2>
-            <h1 className="text-4xl md:text-5xl lg:text-heading-xl font-bold tracking-tight opacity-0 animate-fade-in-delay-1">
-              {portfolioConfig.name}
-            </h1>
+           
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-muted-foreground opacity-0 animate-fade-in-delay-2">
               {portfolioConfig.title}
             </h2>
@@ -28,11 +23,11 @@ const HeroSection = () => {
           
           <div className="flex flex-wrap gap-4 pt-4 opacity-0 animate-fade-in-delay-3">
             <Button asChild size="lg" className="btn-primary">
-              <a href="#projects">View My Projects</a>
+              <a href={portfolioConfig.resumeLink} target="_blank" rel="noopener noreferrer">
+                Resume/CV
+              </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="#contact">Get In Touch</a>
-            </Button>
+          
           </div>
           
           <div className="pt-6 opacity-0 animate-fade-in-delay-3">
@@ -47,20 +42,15 @@ const HeroSection = () => {
               <img
                 src="/profile.jpg" // Replace with your image path
                 alt={portfolioConfig.name}
-                className="w-full h-full object-cover rounded-full"
+                
+                className="w-100 h-100 object-cover rounded-full"
               />
             </div>
           </div>
         </div>
       </div>
       
-      <a 
-        href="#about"
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce-light hidden md:block"
-        aria-label="Scroll to About section"
-      >
-        <ArrowDown className="text-portfolio-600" size={32} />
-      </a>
+     
     </section>
   );
 };
