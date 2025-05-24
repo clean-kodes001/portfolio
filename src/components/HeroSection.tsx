@@ -42,8 +42,7 @@ const HeroSection = () => {
               <img
                 src="/profile.jpg" // Replace with your image path
                 alt={portfolioConfig.name}
-                
-                className="w-100 h-100 object-cover rounded-full"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
           </div>

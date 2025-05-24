@@ -24,21 +24,14 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-      setIsSubmitting(false);
-    }, 1000);
+
+    const mailtoLink = `mailto:${portfolioConfig.contactInfo.email}?subject=${encodeURIComponent(
+      `Message from ${formData.name}`
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+
+    window.location.href = mailtoLink;
   };
 
   return (

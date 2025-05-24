@@ -61,7 +61,7 @@ const ProjectsSection = () => {
   }, [visibleProjects]);
 
   return (
-    <section id="projects" ref={sectionRef} className="bg-background">
+    <section id="projects" ref={sectionRef} className="bg-background" style={{marginTop:-20}}>
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="section-heading animate-appear">My Projects</h2>
