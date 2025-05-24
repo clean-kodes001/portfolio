@@ -58,10 +58,9 @@ export const portfolioConfig = {
   title: "Software Developer",
   email: "anoibidickson@gmail.com",
   location: "Minna, Niger State",
-  bio: "I'm a passionate software developer specializing in building exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.",
+  bio: "I have a strong background in both frontend and backend technologies, with a focus on React, Node.js, PHP and Java.",
   about: `I'm a fullstack developer with over 7 years of experience in designing and implementing scalable applications.
-  I love solving complex problems with clean, efficient code, and I'm always eager to learn new technologies. 
-  When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes.`,
+`,
   
   // Resume/CV
   resumeLink: "/resume.pdf",
