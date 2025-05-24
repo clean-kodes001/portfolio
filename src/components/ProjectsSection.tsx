@@ -88,7 +88,7 @@ const ProjectsSection = () => {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" >
           {visibleProjects.map((project, index) => (
             <Card key={project.id} 
-            className="card-hover flex flex-col h-full stagger-item max-w-sm mx-auto" style={{width:240}}>
+            className="card-hover flex flex-col h-full stagger-item max-w-sm mx-auto">
          
           {project.image && (
                 <div className="aspect-video w-full overflow-hidden rounded-t-lg">
