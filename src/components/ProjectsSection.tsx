@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-270 h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               )}
