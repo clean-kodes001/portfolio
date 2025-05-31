@@ -198,7 +198,7 @@ export const portfolioConfig = {
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/cheepay.gif",
       link: {
-        live: "https://expo.dev/artifacts/eas/uVyCMAzJ28DoTmxHxDP6V1.apk",
+        live: "https://expo.dev/artifacts/eas/qLhqgiopEEiVSvQEbJQpZ4.apk",
         website: "https://cheepayapp.top",
         text:'Download app'
       },
