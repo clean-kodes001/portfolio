@@ -154,12 +154,12 @@ export const portfolioConfig = {
   projects: [
     {
       id: "coinly",
-      title: "Coinly Mobile App",
+      title: "Coinly Mobile App(Pentesting Phase)",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
       link: {
-        live: "https://expo.dev/artifacts/eas/crRC9GCd6GTaBKyJ7bDsAV.apk",
+        live: "https://expo.dev/artifacts/eas/viBaEtJBoVkwNRGJW6dkCX.apk",
         website: "https://thecoinlyapp.com",
         text:'Download app'
       },
