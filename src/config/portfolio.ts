@@ -193,12 +193,12 @@ export const portfolioConfig = {
     },
     {
       id: "cheepay",
-      title: "Cheepay Mobile App",
+      title: "Cheepay Mobile App(Pentesting phase)",
       description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/cheepay.gif",
       link: {
-        live: "https://expo.dev/artifacts/eas/qLhqgiopEEiVSvQEbJQpZ4.apk",
+        live: "https://expo.dev/artifacts/eas/nEAuWCSsjkhtjrzBkECvBz.apk",
         website: "https://cheepayapp.top",
         text:'Download app'
       },
