@@ -163,8 +163,23 @@ export const portfolioConfig = {
         website: "https://thecoinlyapp.com",
         text:'Download app'
       },
+      featured: true 
+    },
+    {
+      id: "ghost",
+      title: "Ghost Team Developer Dashboard",
+      description: "A platform interface designed to help developers collaborate on different projects in realtime",
+      tags: ["Nextjs"],
+      image: "/Screenshot_3-7-2025_72836_ghost-vert.vercel.app.jpeg",
+      link: {
+        website: "https://github.com/Dickson2020/ghost-project",
+        live: "https://ghost-vert.vercel.app/",
+        text:'Visit Website'
+      },
       featured: true
     },
+
+    
     {
       id: "yesatt",
       title: "Yesatt Ride Share (Web, IOS, Android App) - U.S.A Client",
@@ -177,7 +192,7 @@ export const portfolioConfig = {
         text:'Get Demo(Whatsapp)'
       },
       featured: true
-    },
+    }
     ,
     {
       id: "dji-drone-app",
