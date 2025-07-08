@@ -165,6 +165,20 @@ export const portfolioConfig = {
       },
       featured: true 
     },
+
+    {
+      id: "swift",
+      title: "Swift Rider & Package Delivery App",
+      description: "A full-featured mobile app for booking ride within Nigeria, especially Niger State, package & parcel delivery and bill payments.",
+      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      image: "/swift.jpg",
+      link: {
+        live: "https://expo.dev/artifacts/eas/eyAVxLSqMU2zXNLsoRJ8YC.apk",
+        website: "https://swiftpickup.com.ng/",
+        text:'Download app'
+      },
+      featured: true 
+    },
     {
       id: "ghost",
       title: "Ghost Team Developer Dashboard",
