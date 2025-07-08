@@ -180,6 +180,33 @@ export const portfolioConfig = {
       featured: true 
     },
     {
+      id: "cheepay",
+      title: "Cheepay Mobile App(Pentesting phase)",
+      description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
+      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      image: "/cheepay-ads.png",
+      link: {
+        live: "https://expo.dev/artifacts/eas/nEAuWCSsjkhtjrzBkECvBz.apk",
+        website: "https://cheepayapp.top",
+        text:'Download app'
+      },
+      featured: true
+    },
+    {
+      id: "dji-drone-app",
+      title: "IOT Based DJI Drone App Android App",
+      description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
+      tags: ["Java", "PHP", "Mysql DATABASE","Android"],
+      image: "/dji-app.jpg",
+      link: {
+        live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
+        text:'Request For Demo(Whatsapp)'
+      },
+      featured: true
+    },
+   
+   
+    {
       id: "ghost",
       title: "Ghost Team Developer Dashboard",
       description: "A platform interface designed to help developers collaborate on different projects in realtime",
@@ -193,47 +220,7 @@ export const portfolioConfig = {
       featured: true
     },
 
-    
-    {
-      id: "yesatt",
-      title: "Yesatt Ride Share (Web, IOS, Android App) - U.S.A Client",
-      description: "A ride-sharing platform that connects drivers and passengers for convenient transportation.",
-      tags: ["React Native", "NODEJS", "POSTGRES DATABASE","TypeScript", "HTML5", "CSS3"],
-      image: "/Screenshot_29-4-2025_81651_lovable.dev.jpg",
-      link: {
-        website: "https://yesatt.com",
-        live: "https://wa.me/+2348146360057",
-        text:'Get Demo(Whatsapp)'
-      },
-      featured: true
-    }
-    ,
-    {
-      id: "dji-drone-app",
-      title: "IOT Based DJI Drone App Android App",
-      description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
-      tags: ["Java", "PHP", "Mysql DATABASE","Android"],
-      image: "/dji-app.jpg",
-      link: {
-        live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
-        text:'Request For Demo(Whatsapp)'
-      },
-      featured: true
-    },
-    {
-      id: "cheepay",
-      title: "Cheepay Mobile App(Pentesting phase)",
-      description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
-      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
-      image: "/cheepay-ads.png",
-      link: {
-        live: "https://expo.dev/artifacts/eas/nEAuWCSsjkhtjrzBkECvBz.apk",
-        website: "https://cheepayapp.top",
-        text:'Download app'
-      },
-      featured: true
-    },
-   
+  
    
   ] as Project[],
   
