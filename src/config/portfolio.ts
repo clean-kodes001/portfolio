@@ -208,14 +208,14 @@ export const portfolioConfig = {
    
     {
       id: "ghost",
-      title: "Ghost Team Developer Dashboard",
+      title: "Ghost Team Developer Dashboard(2023)",
       description: "A platform interface designed to help developers collaborate on different projects in realtime",
-      tags: ["Nextjs"],
+      tags: ["Nextjs","Tailwind CSS", "TypeScript", "Node.js", "PostgreSQL"],
       image: "/Screenshot_3-7-2025_72836_ghost-vert.vercel.app.jpeg",
       link: {
         website: "https://github.com/Dickson2020/ghost-project",
         live: "https://ghost-vert.vercel.app/",
-        text:'Visit Website'
+        text:'Open Web App'
       },
       featured: true
     },
