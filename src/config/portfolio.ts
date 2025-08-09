@@ -58,7 +58,7 @@ export const portfolioConfig = {
   title: "Software Developer",
   email: "anoibidickson@gmail.com",
   location: "Minna, Niger State",
-  bio: "I have a strong background in both frontend and backend technologies, with a focus on React, Node.js, PHP and Java.",
+  bio: "I have a strong background in both frontend and backend technologies, with 7yrs of experience, with a focus on React, Node.js, PHP and Java.",
   about: `I'm a fullstack developer with over 7 years of experience in designing and implementing scalable applications.
 `,
   
@@ -89,7 +89,7 @@ export const portfolioConfig = {
     {
       category: "Frontend",
       skills: [
-        { name: "React", level: 90 },
+        { name: "Reactjs & Nextjs", level: 90 },
         { name: "ReactNative", level: 90 },
         { name: "Java Mobile Android", level: 85 },
         { name: "Next.js", level: 80 },
@@ -154,12 +154,12 @@ export const portfolioConfig = {
   projects: [
     {
       id: "coinly",
-      title: "Coinly Mobile App(Pentesting Phase)",
+      title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
       link: {
-        live: "https://expo.dev/artifacts/eas/viBaEtJBoVkwNRGJW6dkCX.apk",
+        live: "https://expo.dev/artifacts/eas/9y6eTi1SupqiE41L1QQhTu.apk",
         website: "https://thecoinlyapp.com",
         text:'Download app'
       },
@@ -168,20 +168,22 @@ export const portfolioConfig = {
 
     {
       id: "swift",
-      title: "Swift Rider & Package Delivery App",
+      title: "Swift Rider & Package Delivery App(2025) - Web app available",
       description: "A full-featured mobile app for booking ride within Nigeria, especially Niger State, package & parcel delivery and bill payments.",
-      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      tags: ["React Native", "PHP", "MYSQL","TypeScript", "React"],
       image: "/swift.jpg",
       link: {
         live: "https://expo.dev/artifacts/eas/eyAVxLSqMU2zXNLsoRJ8YC.apk",
-        website: "https://swiftpickup.com.ng/",
+        website: "https://app.swiftpickup.com.ng/",
         text:'Download app'
       },
       featured: true 
     },
+
+    /*
     {
       id: "cheepay",
-      title: "Cheepay Mobile App(Pentesting phase)",
+      title: "Cheepay Mobile App(2025)",
       description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/cheepay-ads.png",
@@ -191,31 +193,18 @@ export const portfolioConfig = {
         text:'Download app'
       },
       featured: true
-    },
-    {
-      id: "dji-drone-app",
-      title: "IOT Based DJI Drone App Android App",
-      description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
-      tags: ["Java", "PHP", "Mysql DATABASE","Android"],
-      image: "/dji-app.jpg",
-      link: {
-        live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
-        text:'Request For Demo(Whatsapp)'
-      },
-      featured: true
-    },
-   
+    }, */
    
     {
       id: "ghost",
       title: "Ghost Team Developer Dashboard(2023)",
       description: "A platform interface designed to help developers collaborate on different projects in realtime",
-      tags: ["Nextjs","Tailwind CSS", "TypeScript", "Node.js", "PostgreSQL"],
+      tags: ["Reactjs","Tailwind CSS","PostgreSQL"],
       image: "/Screenshot_3-7-2025_72836_ghost-vert.vercel.app.jpeg",
       link: {
-        website: "https://github.com/Dickson2020/ghost-project",
-        live: "https://ghost-vert.vercel.app/",
-        text:'Open Web App'
+        live: "https://github.com/Dickson2020/ghost-project",
+        website: "https://ghost-vert.vercel.app/",
+        text:'Github Repository'
       },
       featured: true
     },
