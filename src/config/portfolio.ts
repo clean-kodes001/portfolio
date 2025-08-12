@@ -59,8 +59,8 @@ export const portfolioConfig = {
   title: "Software Developer",
   email: "anoibidickson@gmail.com",
   location: "Minna, Niger State",
-  bio: "I have a strong background in both frontend and backend technologies, with over 4yrs of experience, with a focus on React, Node.js, PHP and Java.",
-  about: `I'm a fullstack developer with over 7 years of experience in designing and implementing scalable applications.
+  bio: "I have a strong background in both frontend and backend technologies, with over 4yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
+  about: `I'm a fullstack developer with over 4 years of experience in designing and implementing scalable applications.
 `,
   
   // Resume/CV
