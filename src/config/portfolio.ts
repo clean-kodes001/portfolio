@@ -180,6 +180,20 @@ export const portfolioConfig = {
       featured: true 
     },
 
+    ,
+    {
+      id: "dji-drone-app",
+      title: "IOT Based DJI Drone App Android App(2025)",
+      description: "A mobile app for controlling DJI drones, capturing photos, and recording videos.",
+      tags: ["Java", "PHP", "Mysql DATABASE","Android"],
+      image: "/dji-app.jpg",
+      link: {
+        live: "https://wa.me/+2348146360057?text=I%20want%20to%20download%20the%20DJI%20Drone%20App",
+        text:'Request For Demo(Whatsapp)'
+      },
+      featured: true
+    },
+   
     /*
     {
       id: "cheepay",
@@ -220,7 +234,7 @@ export const portfolioConfig = {
       institution: "Federal University of Technology",
       location: "Minna, Niger State, Nigeria",
       startDate: "Nov 2019",
-      endDate: "Feb 2035",
+      endDate: "Feb 2025",
       description: "Graduated with 2nd class honors. Focused on software engineering, problem solving and database design."
     },
     {
