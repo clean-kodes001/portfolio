@@ -32,6 +32,7 @@ export interface Project {
     github?: string;
     text?: string;
     website?: string;
+    web_app?: string;
   };
   featured: boolean;
 }
@@ -159,7 +160,7 @@ export const portfolioConfig = {
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
       link: {
-        live: "https://expo.dev/artifacts/eas/9y6eTi1SupqiE41L1QQhTu.apk",
+        live: "https://expo.dev/artifacts/eas/9X1tEhkMZVAbqDXX1d76s7.apk",
         website: "https://thecoinlyapp.com",
         text:'Download app'
       },
@@ -174,8 +175,9 @@ export const portfolioConfig = {
       image: "/swift.jpg",
       link: {
         live: "https://expo.dev/artifacts/eas/eyAVxLSqMU2zXNLsoRJ8YC.apk",
-        website: "https://app.swiftpickup.com.ng/",
-        text:'Download app'
+        website: "https://swiftpickup.com.ng/",
+        web_app: "https://app.swiftpickup.com.ng/",
+        text:'Download APK(Android)'
       },
       featured: true 
     },

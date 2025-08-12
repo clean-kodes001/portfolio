@@ -126,6 +126,19 @@ const ProjectsSection = () => {
                     </a>
                   </Button>
                 )}
+                 {project.link?.web_app && (
+                  <Button asChild variant="outline" size="sm">
+                    <a 
+                      href={project.link.web_app} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1"
+                    >
+                      <ExternalLink size={16} />
+                      <span>Open Web App</span>
+                    </a>
+                  </Button>
+                )}
                 {project.link?.live && (
                   <Button asChild size="sm">
                     <a 
