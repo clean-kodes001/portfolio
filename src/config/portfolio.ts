@@ -212,6 +212,21 @@ export const portfolioConfig = {
 
     ,
     {
+      id: "flourish-consolidated-farms",
+      title: "Flourish Consolidated Farms(2025)",
+      description: "A website to buy fresh farm products online, with features for browsing products, adding to cart, and secure checkout.",
+      tags: ["PHP","MYSQL","JavaScript"],
+      image: "/Screenshot_25-8-2025_184819_flourishcf.com.jpeg",
+      link: {
+        live: "https://flourishcf.com/",
+        text:'Visit website'
+      },
+      featured: true
+    },
+   
+
+    ,
+    {
       id: "dji-drone-app",
       title: "IOT Based DJI Military Drone App Android App(2025)",
       description: "A mobile app for tracking & monitoring DJI military drones, with features for live video streaming, flight control, and data analysis.",
