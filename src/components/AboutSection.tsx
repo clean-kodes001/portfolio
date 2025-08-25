@@ -59,26 +59,7 @@ const AboutSection = () => {
             </button>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold mb-4 animate-appear">My Skills</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
-              {portfolioConfig.skills.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="animate-appear">
-                  <h4 className="font-semibold mb-3 text-lg">{category.category}</h4>
-                  <div className="space-y-4">
-                    {category.skills.map((skill, skillIndex) => (
-                      <SkillBar 
-                        key={skillIndex} 
-                        name={skill.name} 
-                        level={skill.level} 
-                        delay={skillIndex * 0.2}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+   
         </div>
       </div>
     </section>

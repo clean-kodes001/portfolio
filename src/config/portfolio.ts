@@ -59,7 +59,7 @@ export const portfolioConfig = {
   title: "Software Developer",
   email: "anoibidickson@gmail.com",
   location: "Minna, Niger State",
-  bio: "I have a strong background in both frontend and backend technologies, with over 4yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
+  bio: "I have a strong background in both frontend and backend technologies, with over 5yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
   about: `I'm a fullstack developer with over 4 years of experience in designing and implementing scalable applications.
 `,
   
@@ -177,7 +177,6 @@ export const portfolioConfig = {
         live: "https://expo.dev/artifacts/eas/eyAVxLSqMU2zXNLsoRJ8YC.apk",
         website: "https://swiftpickup.com.ng/",
         web_app: "https://app.swiftpickup.com.ng/",
-        text:'Download APK(Android)'
       },
       featured: true 
     },

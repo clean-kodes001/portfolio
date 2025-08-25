@@ -70,19 +70,7 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 animate-appear">
-          {allTags.map((tag, index) => (
-            <Button
-              key={index}
-              variant={activeFilter === tag ? "default" : "outline"}
-              className={activeFilter === tag ? "bg-portfolio-600" : ""}
-              onClick={() => setActiveFilter(tag)}
-            >
-              {tag.charAt(0).toUpperCase() + tag.slice(1)}
-            </Button>
-          ))}
-        </div>
+      
 
         {/* Projects grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" >

@@ -97,59 +97,7 @@ const ContactSection = () => {
             </div>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-6 animate-appear">
-            <div>
-              <label htmlFor="name" className="block mb-2 font-medium">
-                Your Name
-              </label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block mb-2 font-medium">
-                Your Email
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="john@example.com"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block mb-2 font-medium">
-                Your Message
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Hello, I'd like to talk about..."
-                className="min-h-32"
-                required
-              />
-            </div>
-            
-            <Button 
-              type="submit" 
-              className="w-full" 
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </Button>
-          </form>
+        
         </div>
       </div>
     </section>
