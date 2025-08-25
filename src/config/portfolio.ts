@@ -196,6 +196,20 @@ export const portfolioConfig = {
       featured: true 
     },
 
+    {
+      id: "webjs",
+      title: "WebJS GUI Library(2022)",
+      description: "WebJS is a JavaScript library for developing Extremely fast webpages, writing lesser HTML code The primary aim of WebJS is to enable web developers with little knowledge of JavaScript to be able to develop webpages with heavy functions by importing and using it.",
+      tags: ["Vanilla JavaScript","HTML5","CSS3"],
+      image: "/Screenshot_25-8-2025_18448_github.com.jpeg",
+      link: {
+        live: "https://github.com/Dickson2020/WebJS-Library",
+        website: "https://github.com/Dickson2020/WebJS-Library",
+        text:'Github Repository'
+      },
+      featured: true 
+    },
+
     ,
     {
       id: "dji-drone-app",
