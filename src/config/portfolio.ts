@@ -182,6 +182,20 @@ export const portfolioConfig = {
       featured: true 
     },
 
+     {
+      id: "netwoth-game-app",
+      title: "Networth Game Web App(2024)",
+      description: "A web3 based multiplayer game app where users can play to earn and win cryptocurrencies.",
+      tags: ["Nodejs","Supabase","DynamicXYZ","NextJS","Tailwind CSS"],
+      image: "/Screenshot_25-8-2025_184038_networthgameapp.vercel.app.jpeg",
+      link: {
+        live: "https://github.com/Dickson2020/networthgameapp",
+        website: "https://networthgameapp.vercel.app/",
+        text:'Visit Website'
+      },
+      featured: true 
+    },
+
     ,
     {
       id: "dji-drone-app",
