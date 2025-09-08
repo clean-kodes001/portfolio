@@ -64,7 +64,7 @@ export const portfolioConfig = {
 `,
   
   // Resume/CV
-  resumeLink: "/resume.pdf",
+  resumeLink: "/resume-software-engineer.docx",
   
   // Social Links
   socialLinks: [
@@ -161,14 +161,14 @@ export const portfolioConfig = {
       image: "/coinly.jpg",
       link: {
         website: "https://coinlyapp.io",
-        text:'Download app'
+        text:'Visit website'
       },
       featured: true 
     },
 
     {
       id: "swift",
-      title: "Swift Rider & Package Delivery App(2025) - Web app available",
+      title: "Swift Rider & Package Delivery App(2025) - (App under Playstore Review) - Web app available",
       description: "A full-featured mobile app for booking ride within Nigeria, especially Niger State, package & parcel delivery and bill payments.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "React"],
       image: "/swift.jpg",
