@@ -159,7 +159,7 @@ export const portfolioConfig = {
       image: "/Screenshot_12-11-2025_93620_.jpeg",
       link: {
         website: "/thesis.pdf",
-        website2: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
+        web_app: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
         text:'Thesis & Documentation',
         text2:'Kaggle Notebook (Dataset & Trained Models)'
       },
@@ -220,20 +220,7 @@ export const portfolioConfig = {
       featured: true 
     },
 
-    ,
-    {
-      id: "flourish-consolidated-farms",
-      title: "Flourish Consolidated Farms(2025)",
-      description: "A website to buy fresh farm products online, with features for browsing products, adding to cart, and secure checkout.",
-      tags: ["PHP","MYSQL","JavaScript"],
-      image: "/Screenshot_25-8-2025_184819_flourishcf.com.jpeg",
-      link: {
-        live: "https://flourishcf.com/",
-        text:'Visit website'
-      },
-      featured: true
-    },
-   
+    
 
     ,
     /*
