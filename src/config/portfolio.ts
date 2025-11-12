@@ -159,7 +159,9 @@ export const portfolioConfig = {
       image: "/Screenshot_12-11-2025_93620_.jpeg",
       link: {
         website: "/thesis.pdf",
-        text:'Thesis & Documentation'
+        website2: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
+        text:'Thesis & Documentation',
+        text2:'Kaggle Notebook (Dataset & Trained Models)'
       },
       featured: true 
     },
