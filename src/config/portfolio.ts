@@ -142,7 +142,7 @@ export const portfolioConfig = {
       title: "Kudipoint Mobile App(Available on Playstore) - 2025",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
-      image: "/kudipoint.jpg",
+      image: "/Screenshot_12-11-2025_74140_play.google.com.jpeg",
       link: {
         website: "https://play.google.com/store/apps/details?id=com.kudipointfinance.finance&pli=1",
         text:'Install App',
