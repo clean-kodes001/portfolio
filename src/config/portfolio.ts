@@ -131,34 +131,32 @@ export const portfolioConfig = {
         "Implemented unit and integration tests using Jest and React Testing Library, increasing code coverage to 85%",
         "Mentored junior developers and conducted code reviews to ensure best practices"],
       skills: ["React Native", "TypeScript", "Redux", "MYSQL", "PHP"]
-    },
-    {
-      title: "Frontend & Backend Developer",
-      company: "Cheepay payment solutions",
-      location: "Minna, Niger state",
-      startDate: "Oct 2023",
-      endDate: "Present",
-      description: "Built responsive web & mobile applications for the company's payment solutions.",
-      bullets: [
-        "Developed and maintained the mobile application using React Native, PHP for server side & API, and Mysql for robust database",
-        "Worked closely with the design team to ensure a consistent and user-friendly interface",
-        "Integrated third-party APIs for payment processing and data visualization",
-
-       
-      ],
-      skills: ["React Native", "JavaScript", "CSS3", "HTML5", "PHP", "MYSQL"]
-    },
+    }
   
   ] as Experience[],
   
   // Projects
   projects: [
+     {
+      id: "kudipoint",
+      title: "Kudipoint Mobile App(Available on Playstore) - 2025",
+      description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
+      tags: ["React Native", "TypeScript"],
+      image: "/coinly.jpg",
+      link: {
+        website: "https://play.google.com/store/apps/details?id=com.kudipointfinance.finance&pli=1",
+        text:'Install App',
+         web_app: "https://kudipoint.ng/",
+
+      },
+      featured: true 
+    },
     {
       id: "coinly",
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
-      image: "/coinly.jpg",
+      image: "/kudipoint.jpg",
       link: {
         website: "https://coinlyapp.io",
         text:'Visit website'
