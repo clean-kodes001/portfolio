@@ -110,7 +110,9 @@ const ProjectsSection = () => {
                       className="flex items-center gap-1"
                     >
                       <ExternalLink size={16} />
-                      <span>Visit website</span>
+                      <span>
+                        {project?.link?.text ?? 'Visit website'}
+                      </span>
                     </a>
                   </Button>
                 )}
@@ -123,7 +125,10 @@ const ProjectsSection = () => {
                       className="flex items-center gap-1"
                     >
                       <ExternalLink size={16} />
-                      <span>Open Web App</span>
+                      <span>
+                                              {project?.link?.text2 ?? 'Open Web App'}
+
+                      </span>
                     </a>
                   </Button>
                 )}
