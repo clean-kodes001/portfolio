@@ -142,7 +142,7 @@ export const portfolioConfig = {
       title: "Kudipoint Mobile App(Available on Playstore) - 2025",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
-      image: "/coinly.jpg",
+      image: "/kudipoint.jpg",
       link: {
         website: "https://play.google.com/store/apps/details?id=com.kudipointfinance.finance&pli=1",
         text:'Install App',
@@ -156,7 +156,7 @@ export const portfolioConfig = {
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
-      image: "/kudipoint.jpg",
+      image: "/coinly.jpg",
       link: {
         website: "https://coinlyapp.io",
         text:'Visit website'
