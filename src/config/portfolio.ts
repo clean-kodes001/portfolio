@@ -154,7 +154,7 @@ export const portfolioConfig = {
      {
       id: "maize-farm-disease-detector",
       title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases",
-      description: "A physical system running on an A.I model to detect and cure maize crops on Maize leaf blight, spot and rust",
+      description: "A smart, AI-powered physical system designed to detect and treat maize leaf diseases such as blight, rust, and leaf spot. The system integrates computer vision, Raspberry Pi, and chemical spraying actuators to automatically identify infected maize leaves using a trained AI model and apply targeted treatment through controlled chemical dispensing.",
       tags: ["Raspberry PI","Python3","Sci-kit learn","M.L","A.I"],
       image: "/Screenshot_12-11-2025_93620_.jpeg",
       link: {
@@ -192,20 +192,7 @@ export const portfolioConfig = {
       featured: true 
     },
 
-     {
-      id: "netwoth-game-app",
-      title: "Networth Game Web App(2024)",
-      description: "A web3 based multiplayer game app where users can play to earn and win cryptocurrencies.",
-      tags: ["Nodejs","Supabase","DynamicXYZ","NextJS","Tailwind CSS"],
-      image: "/Screenshot_25-8-2025_184038_networthgameapp.vercel.app.jpeg",
-      link: {
-        live: "https://github.com/Dickson2020/networthgameapp",
-        website: "https://networthgameapp.vercel.app/",
-        text:'Visit Website'
-      },
-      featured: true 
-    },
-
+   
     {
       id: "webjs",
       title: "WebJS GUI Library(2022)",
