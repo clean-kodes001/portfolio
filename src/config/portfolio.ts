@@ -64,7 +64,7 @@ export const portfolioConfig = {
 `,
   
   // Resume/CV
-  resumeLink: "/resume-software-engineer.docx",
+  resumeLink: "/Anoibi_DicksonMiracle_CV.pdf",
   
   // Social Links
   socialLinks: [
@@ -151,6 +151,19 @@ export const portfolioConfig = {
       },
       featured: true 
     },
+     {
+      id: "maize-farm-disease-detector",
+      title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases",
+      description: "A physical system running on an A.I model to detect and cure maize crops on Maize leaf blight, spot and rust",
+      tags: ["Raspberry PI","Python3","Sci-kit learn","M.L","A.I"],
+      image: "/Screenshot_12-11-2025_93620_.jpeg",
+      link: {
+        website: "/thesis.pdf",
+        text:'Thesis & Documentation'
+      },
+      featured: true 
+    },
+
     {
       id: "coinly",
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
