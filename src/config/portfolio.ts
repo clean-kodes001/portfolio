@@ -55,8 +55,8 @@ export interface Education {
 // Main configuration for the portfolio
 export const portfolioConfig = {
   // Personal Info
-  name: "Dickson Miracle",
-  title: "Software Developer",
+  name: "Dickson Anoibi",
+  title: "Software Engineer",
   email: "anoibidickson@gmail.com",
   location: "Minna, Niger State",
   bio: "I have a strong background in both frontend and backend technologies, with over 5yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
@@ -64,7 +64,7 @@ export const portfolioConfig = {
 `,
   
   // Resume/CV
-  resumeLink: "/Anoibi_DicksonMiracle_CV.pdf",
+  resumeLink: "/Resume.pdf",
   
   // Social Links
   socialLinks: [
@@ -77,11 +77,6 @@ export const portfolioConfig = {
       name: "Whatsapp",
       url: "https://wa.me/+2348146360057",
       icon: "whatsapp"
-    },
-    {
-      name: "Facebook",
-      url: "https://web.facebook.com/profile.php?id=100070429810693",
-      icon: "facebook"
     }
   ] as SocialLink[],
   
