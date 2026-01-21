@@ -134,13 +134,12 @@ export const portfolioConfig = {
   projects: [
      {
       id: "kudipoint",
-      title: "Kudipoint Mobile App(Available on Playstore) - 2025",
+      title: "Kudipoint(Playstore & Appstore)",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
       image: "/Screenshot_12-11-2025_74140_play.google.com.jpeg",
       link: {
-        website: "https://play.google.com/store/apps/details?id=com.kudipointfinance.finance&pli=1",
-        text:'Install App',
+        text:'Visit website',
          web_app: "https://kudipoint.ng/",
 
       },
@@ -155,8 +154,8 @@ export const portfolioConfig = {
       link: {
         website: "/thesis.pdf",
         web_app: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
-        text:'Thesis & Documentation',
-        text2:'Kaggle Notebook (Dataset & Trained Models)'
+        text:'Documentation',
+        text2:'Kaggle'
       },
       featured: true 
     },
@@ -176,49 +175,17 @@ export const portfolioConfig = {
 
     {
       id: "swift",
-      title: "Swift Rider & Package Delivery App(2025) - (App under Playstore Review) - Web app available",
-      description: "A full-featured mobile app for booking ride within Nigeria, especially Niger State, package & parcel delivery and bill payments.",
+      title: "Swift Ride (2025) - IOS & Android",
+      description: "A full-featured mobile app for booking ride within Nigeria.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "React"],
       image: "/swift.jpg",
       link: {
+        text:"Visit website",
         website: "https://swiftpickup.com.ng/",
-        web_app: "https://app.swiftpickup.com.ng/",
       },
       featured: true 
     },
 
-   
-    {
-      id: "webjs",
-      title: "WebJS GUI Library(2022)",
-      description: "WebJS is a JavaScript library for developing Extremely fast webpages, writing lesser HTML code The primary aim of WebJS is to enable web developers with little knowledge of JavaScript to be able to develop webpages with heavy functions by importing and using it.",
-      tags: ["Vanilla JavaScript","HTML5","CSS3"],
-      image: "/Screenshot_25-8-2025_18448_github.com.jpeg",
-      link: {
-        live: "https://github.com/Dickson2020/WebJS-Library",
-        website: "https://github.com/Dickson2020/WebJS-Library",
-        text:'Github Repository'
-      },
-      featured: true 
-    },
-
-    
-
-    ,
-    /*
-    {
-      id: "cheepay",
-      title: "Cheepay Mobile App(2025)",
-      description: "A full-featured mobile app for bill payments, send & receive money, social media promotions, and more.",
-      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
-      image: "/cheepay-ads.png",
-      link: {
-        live: "https://expo.dev/artifacts/eas/nEAuWCSsjkhtjrzBkECvBz.apk",
-        website: "https://cheepayapp.top",
-        text:'Download app'
-      },
-      featured: true
-    }, */
    
     {
       id: "ghost",
