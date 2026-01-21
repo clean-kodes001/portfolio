@@ -137,7 +137,7 @@ export const portfolioConfig = {
       title: "Kudipoint(Playstore & Appstore)",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
-      image: "/Screenshot_12-11-2025_74140_play.google.com.jpeg",
+      image: "/Screenshot_21-1-2026_172750_play.google.com.jpeg",
       link: {
         text:'Visit website',
          web_app: "https://kudipoint.ng/",
@@ -178,7 +178,7 @@ export const portfolioConfig = {
       title: "Swift Ride (2025) - IOS & Android",
       description: "A full-featured mobile app for booking ride within Nigeria.",
       tags: ["React Native", "PHP", "MYSQL","TypeScript", "React"],
-      image: "/swift.jpg",
+      image: "/Screenshot_21-1-2026_172524_play.google.com.jpeg",
       link: {
         text:"Visit website",
         website: "https://swiftpickup.com.ng/",
