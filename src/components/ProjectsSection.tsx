@@ -9,13 +9,30 @@ import {
 } from "@/components/ui/card";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Layout, Globe, AppWindow } from 'lucide-react';
-import { cn } from "@/lib/utils"; // Standard shadcn utility
+import { ExternalLink, Layout, Globe, AppWindow } from 'lucide-react';
+import { cn } from "@/lib/utils";
+
+// Define interface for Project for type safety
+interface Project {
+  id: string | number;
+  title: string;
+  description: string;
+  image?: string;
+  tags: string[];
+  link?: {
+    website?: string;
+    web_app?: string;
+    live?: string;
+    text?: string;
+    text2?: string;
+  };
+}
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
-  const [visibleProjects, setVisibleProjects] = useState(portfolioConfig.projects);
-  const sectionRef = useRef<HTMLElement>(null);
+  const [visibleProjects, setVisibleProjects] = useState<Project[]>(portfolioConfig.projects);
+  // Changed to HTMLDivElement to match standard React ref expectations
+  const sectionRef = useRef<HTMLDivElement>(null);
   
   const allTags = ['all', ...new Set(portfolioConfig.projects.flatMap(project => project.tags))];
 
@@ -29,7 +46,6 @@ const ProjectsSection = () => {
     }
   }, [activeFilter]);
 
-  // Intersection Observer for stagger animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
@@ -38,8 +54,11 @@ const ProjectsSection = () => {
             const animateItems = entry.target.querySelectorAll('.stagger-item');
             animateItems.forEach((item, index) => {
               setTimeout(() => {
-                item.classList.add('opacity-100', 'translate-y-0');
-                item.classList.remove('opacity-0', 'translate-y-10');
+                // Check if item exists to avoid null pointer errors if component unmounted
+                if (item) {
+                  item.classList.add('opacity-100', 'translate-y-0');
+                  item.classList.remove('opacity-0', 'translate-y-10');
+                }
               }, index * 100);
             });
           }
@@ -49,12 +68,15 @@ const ProjectsSection = () => {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => sectionRef.current && observer.unobserve(sectionRef.current);
-  }, [visibleProjects]);
+    
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, [visibleProjects]); // Re-observe when items change
 
   return (
-    <section id="projects" ref={sectionRef} className="py-24 bg-slate-50/50 dark:bg-slate-950/50">
-      <div className="container px-4 md:px-6">
+    <section id="projects" className="py-24 bg-slate-50/50 dark:bg-slate-950/50">
+      <div ref={sectionRef} className="container px-4 md:px-6">
         
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-12 space-y-4">
@@ -92,7 +114,6 @@ const ProjectsSection = () => {
               key={project.id} 
               className="group flex flex-col h-full stagger-item transition-all duration-500 border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm opacity-0 translate-y-10 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
             >
-              {/* Image Container with Overlay */}
               {project.image && (
                 <div className="relative aspect-video overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
