@@ -1,167 +1,215 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { portfolioConfig } from '../config/portfolio';
-import { 
-  Card, 
-  CardContent, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Layout, Globe, AppWindow } from 'lucide-react';
-import { cn } from "@/lib/utils"; // Standard shadcn utility
+import React, { useEffect, useRef, useState } from "react";
+import { portfolioConfig } from "../config/portfolio";
 
-const ProjectsSection = () => { 
-  const [activeFilter, setActiveFilter] = useState<string>('all');
-  const [visibleProjects, setVisibleProjects] = useState(portfolioConfig.projects);
-  const sectionRef = useRef<HTMLElement>(null);
-  
-  const allTags = ['all', ...new Set(portfolioConfig.projects.flatMap(project => project.tags))];
+const ProjectsSection: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [visibleProjects, setVisibleProjects] = useState(portfolioConfig.projects);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    if (activeFilter === 'all') {
-      setVisibleProjects(portfolioConfig.projects);
-    } else {
-      setVisibleProjects(
-        portfolioConfig.projects.filter(project => project.tags.includes(activeFilter))
-      );
-    }
-  }, [activeFilter]);
+  const allTags = ["all", ...new Set(portfolioConfig.projects.flatMap((p) => p.tags))];
 
-  // Intersection Observer for stagger animations
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const animateItems = entry.target.querySelectorAll('.stagger-item');
-            animateItems.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add('opacity-100', 'translate-y-0');
-                item.classList.remove('opacity-0', 'translate-y-10');
-              }, index * 100);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  /* FILTER LOGIC */
+  useEffect(() => {
+    if (activeFilter === "all") {
+      setVisibleProjects(portfolioConfig.projects);
+    } else {
+      setVisibleProjects(portfolioConfig.projects.filter((p) => p.tags.includes(activeFilter)));
+    }
+  }, [activeFilter]);
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => sectionRef.current && observer.unobserve(sectionRef.current);
-  }, [visibleProjects]);
+  /* STAGGER ANIMATION */
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const items = entry.target.querySelectorAll(".project-card");
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              (item as HTMLElement).style.opacity = "1";
+              (item as HTMLElement).style.transform = "translateY(0)";
+            }, index * 100);
+          });
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [visibleProjects]);
 
-  return (
-    <section id="projects" ref={sectionRef} className="py-24 bg-slate-50/50 dark:bg-slate-950/50">
-      <div className="container px-4 md:px-6">
-        
-        {/* Header Section */}
-        <div className="flex flex-col items-center text-center mb-12 space-y-4">
-          <Badge variant="outline" className="px-4 py-1 border-primary/20 text-primary bg-primary/5">
-            Portfolio
-          </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Featured Projects</h2>
-          <p className="text-muted-foreground max-w-[600px] text-lg">
-            A showcase of my recent work, ranging from web applications to creative experiments.
-          </p>
-        </div>
+  return (
+    <section
+      ref={sectionRef}
+      style={{
+        padding: "100px 20px",
+        background: "linear-gradient(180deg, #fdfeff 0%, #f1f5f9 100%)",
+        minHeight: "100vh",
+      }}
+    >
+      {/* HEADER SECTION */}
+      <div style={{ textAlign: "center", marginBottom: 64 }}>
+        <span
+          style={{
+            fontSize: 12,
+            textTransform: "uppercase",
+            letterSpacing: "0.2em",
+            fontWeight: 800,
+            color: "#3b82f6",
+            background: "rgba(59, 130, 246, 0.1)",
+            padding: "8px 16px",
+            borderRadius: 100,
+          }}
+        >
+          Work Portfolio
+        </span>
+        
+      </div>
 
-        {/* Filter Bar */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {allTags.map((tag) => (
-            <Button
-              key={tag}
-              variant={activeFilter === tag ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveFilter(tag)}
-              className={cn(
-                "capitalize transition-all duration-300 rounded-full px-6",
-                activeFilter === tag ? "shadow-md scale-105" : "hover:bg-primary/5"
-              )}
-            >
-              {tag}
-            </Button>
-          ))}
-        </div>
+     
 
-        {/* Projects Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {visibleProjects.map((project) => (
-            <Card 
-              key={project.id} 
-              className="group flex flex-col h-full stagger-item transition-all duration-500 border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm opacity-0 translate-y-10 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 overflow-hidden"
-            >
-              {/* Image Container with Overlay */}
-              {project.image && (
-                <div className="relative aspect-video overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-              )}
+      {/* PROJECT GRID */}
+      <div
+        style={{
+          display: "grid",
+          gap: 32,
+          gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+          maxWidth: 1280,
+          margin: "0 auto",
+        }}
+      >
+        {visibleProjects.map((project) => (
+          <div
+            key={project.id}
+            className="project-card"
+            style={{
+              background: "#fff",
+              borderRadius: 24,
+              overflow: "hidden",
+              border: "1px solid #f1f5f9",
+              boxShadow: "0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.03)",
+              opacity: 0,
+              transform: "translateY(40px)",
+              transition: "transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease",
+              display: "flex",
+              flexDirection: "column",
+              cursor: "default",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-10px)";
+              e.currentTarget.style.boxShadow = "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.02)";
+            }}
+          >
+            {/* THUMBNAIL CONTAINER */}
+            <div style={{ position: "relative", overflow: "hidden", height: 220 }}>
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              )}
+              <div style={{
+                position: "absolute",
+                top: 0, left: 0, right: 0, bottom: 0,
+                background: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%)",
+                opacity: 0.8
+              }} />
+            </div>
 
-              <CardHeader className="space-y-3">
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag, i) => (
-                    <span key={i} className="text-[10px] uppercase tracking-wider font-bold text-primary/70 bg-primary/5 px-2 py-0.5 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
+            {/* CARD CONTENT */}
+            <div style={{ padding: 28, flexGrow: 1 }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 16 }}>
+                {project.tags.map((tag, i) => (
+                  <span key={i} style={{
+                    fontSize: 11, fontWeight: 700, color: "#3b82f6",
+                    background: "#eff6ff", padding: "4px 10px", borderRadius: 8
+                  }}>
+                    #{tag}
+                  </span>
+                ))}
+              </div>
 
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-              </CardContent>
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#1e293b", marginBottom: 10 }}>
+                {project.title}
+              </h3>
 
-              <CardFooter className="grid grid-cols-2 gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-                {project.link?.website && (
-                  <Button asChild variant="outline" size="sm" className="w-full justify-center gap-2 border-slate-200 dark:border-slate-700">
-                    <a href={project.link.website} target="_blank" rel="noopener noreferrer">
-                      <Globe size={14} />
-                      <span className="truncate">{project.link.text || 'Website'}</span>
-                    </a>
-                  </Button>
-                )}
-                {project.link?.web_app && (
-                  <Button asChild variant="outline" size="sm" className="w-full justify-center gap-2 border-slate-200 dark:border-slate-700">
-                    <a href={project.link.web_app} target="_blank" rel="noopener noreferrer">
-                      <AppWindow size={14} />
-                      <span className="truncate">{project.link.text2 || 'App'}</span>
-                    </a>
-                  </Button>
-                )}
-                {project.link?.live && (
-                  <Button asChild size="sm" className="col-span-2 w-full justify-center gap-2 shadow-sm">
-                    <a href={project.link.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={14} />
-                      <span>Live Preview</span>
-                    </a>
-                  </Button>
-                )}
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+              <p style={{ color: "#64748b", lineHeight: 1.7, fontSize: 15 }}>
+                {project.description}
+              </p>
+            </div>
 
-        {visibleProjects.length === 0 && (
-          <div className="text-center py-20">
-            <Layout className="mx-auto text-muted-foreground mb-4 opacity-20" size={48} />
-            <p className="text-xl text-muted-foreground">No projects found for this category.</p>
-          </div>
-        )}
-      </div>
-    </section>
-  );
+            {/* CARD ACTION AREA */}
+            <div
+              style={{
+                padding: "20px 28px 28px",
+                display: "flex",
+                gap: 12,
+              }}
+            >
+              {(project.link?.website || project.link?.web_app) && (
+                <a
+                  href={project.link.website || project.link.web_app}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    flex: 1,
+                    textAlign: "center",
+                    padding: "12px",
+                    borderRadius: 14,
+                    background: "#f8fafc",
+                    border: "1px solid #e2e8f0",
+                    textDecoration: "none",
+                    color: "#0f172a",
+                    fontWeight: 700,
+                    fontSize: 14,
+                    transition: "background 0.2s"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#f1f5f9"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#f8fafc"}
+                >
+                  View Website
+                </a>
+              )}
+
+              {project.link?.live && (
+                <a
+                  href={project.link.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    flex: 1.2,
+                    textAlign: "center",
+                    padding: "12px",
+                    borderRadius: 14,
+                    background: "#0f172a",
+                    color: "#fff",
+                    textDecoration: "none",
+                    fontWeight: 700,
+                    fontSize: 14,
+                    boxShadow: "0 10px 15px -3px rgba(15, 23, 42, 0.2)"
+                  }}
+                >
+                  Launch App
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {visibleProjects.length === 0 && (
+        <div style={{ textAlign: "center", marginTop: 100, color: "#94a3b8", fontSize: 18 }}>
+          No projects matched your selection.
+        </div>
+      )}
+    </section>
+  );
 };
 
 export default ProjectsSection;

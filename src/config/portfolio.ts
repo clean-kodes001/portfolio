@@ -62,10 +62,10 @@ export const portfolioConfig = {
   bio: "I have a strong background in both frontend and backend technologies, with over 5yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
   about: `I'm a fullstack developer with over 4 years of experience in designing and implementing scalable applications.
 `,
-  
+
   // Resume/CV
   resumeLink: "/Resume.pdf",
-  
+
   // Social Links
   socialLinks: [
     {
@@ -79,7 +79,7 @@ export const portfolioConfig = {
       icon: "whatsapp"
     }
   ] as SocialLink[],
-  
+
   // Skills
   skills: [
     {
@@ -109,7 +109,7 @@ export const portfolioConfig = {
       ]
     }
   ] as SkillCategory[],
-  
+
   // Experience
   experiences: [
     {
@@ -127,78 +127,77 @@ export const portfolioConfig = {
         "Mentored junior developers and conducted code reviews to ensure best practices"],
       skills: ["React Native", "TypeScript", "Redux", "MYSQL", "PHP"]
     }
-  
+
   ] as Experience[],
-  
+
   // Projects
   projects: [
-     {
+    {
       id: "kudipoint",
       title: "Kudipoint(Playstore & Appstore)",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
       image: "/Screenshot_21-1-2026_172750_play.google.com.jpeg",
       link: {
-        text:'Visit website',
-         web_app: "https://kudipoint.ng/",
+        text: 'Visit website',
+        web_app: "https://kudipoint.ng/",
 
       },
-      featured: true 
+      featured: true
     },
-   
     {
       id: "coinly",
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
-      tags: ["React Native", "PHP", "MYSQL","TypeScript", "HTML5", "CSS3"],
+      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
       link: {
         website: "https://coinlyapp.io",
-        text:'Visit website'
+        text: 'Visit website'
       },
-      featured: true 
+      featured: true
     },
     {
       id: "swift",
       title: "Swift Ride (2025) - IOS & Android",
       description: "A full-featured mobile app for booking ride within Nigeria.",
-      tags: ["React Native", "PHP", "MYSQL","TypeScript", "React"],
+      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "React"],
       image: "/Screenshot_21-1-2026_172524_play.google.com.jpeg",
       link: {
-        text:"Visit website",
+        text: "Visit website",
         website: "https://swiftpickup.com.ng/",
       },
-      featured: true 
-    },   
-      {
+      featured: true
+    },
+    {
       id: "maize-farm-disease-detector",
       title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases",
       description: "A smart, AI-powered physical system designed to detect and treat maize leaf diseases such as blight, rust, and leaf spot. The system integrates computer vision, Raspberry Pi, and chemical spraying actuators to automatically identify infected maize leaves using a trained AI model and apply targeted treatment through controlled chemical dispensing.",
-      tags: ["Raspberry PI","Python3","Sci-kit learn","M.L","A.I"],
+      tags: ["Raspberry PI", "Python3", "Sci-kit learn", "M.L", "A.I"],
       image: "/Screenshot_12-11-2025_93620_.jpeg",
       link: {
         website: "/thesis.pdf",
         web_app: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
-        text:'Documentation',
-        text2:'Kaggle'
+        text: 'Documentation',
+        text2: 'Kaggle'
       },
-      featured: true 
+      featured: true
     },
     {
       id: "ghost",
       title: "Ghost Team Developer Dashboard(2023)",
       description: "A platform interface designed to help developers collaborate on different projects in realtime",
-      tags: ["Reactjs","Tailwind CSS","PostgreSQL"],
+      tags: ["Reactjs", "Tailwind CSS", "PostgreSQL"],
       image: "/Screenshot_3-7-2025_72836_ghost-vert.vercel.app.jpeg",
       link: {
         live: "https://github.com/Dickson2020/ghost-project",
         website: "https://ghost-vert.vercel.app/",
-        text:'Github Repository'
+        text: 'Github Repository'
       },
       featured: true
     }
   ] as Project[],
-  
+
   // Education
   education: [
     {
@@ -218,7 +217,7 @@ export const portfolioConfig = {
       description: "Intensive program covering modern web development technologies."
     }
   ] as Education[],
-  
+
   // Contact Info
   contactInfo: {
     email: "anoibidickson@gmail.com",
