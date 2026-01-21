@@ -159,7 +159,6 @@ export const portfolioConfig = {
       },
       featured: true 
     },
-
     {
       id: "coinly",
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
@@ -172,7 +171,6 @@ export const portfolioConfig = {
       },
       featured: true 
     },
-
     {
       id: "swift",
       title: "Swift Ride (2025) - IOS & Android",
@@ -184,9 +182,7 @@ export const portfolioConfig = {
         website: "https://swiftpickup.com.ng/",
       },
       featured: true 
-    },
-
-   
+    },   
     {
       id: "ghost",
       title: "Ghost Team Developer Dashboard(2023)",
@@ -199,10 +195,7 @@ export const portfolioConfig = {
         text:'Github Repository'
       },
       featured: true
-    },
-
-  
-   
+    }
   ] as Project[],
   
   // Education
@@ -229,6 +222,6 @@ export const portfolioConfig = {
   contactInfo: {
     email: "anoibidickson@gmail.com",
     phone: "+234 814 636 0057",
-    location: "Minna, Niger"
+    location: "Lafia, Nasarawa State"
   }
 };
