@@ -59,7 +59,7 @@ export const portfolioConfig = {
   title: "Software Engineer",
   email: "anoibidickson@gmail.com",
   location: "Lafia, Nasarawa State",
-  bio: "I have a strong background in both frontend and backend technologies, with a focus on React, Node.js, PHP and Java.",
+  bio: "Full-stack software engineer with over 5 years of experience across React, React-Native, Node.js, PHP, and Java, building real-world web and mobile applications used by paying customers. Skilled at turning business requirements into fast, secure, and scalable products using tools such as Git, AWS, MySQL/PostgreSQL, REST APIs, Docker, Jira, and CI/CD pipelines.",
   about: `I'm a fullstack developer with over 5+ years of experience in designing and implementing scalable applications.
 `,
 
