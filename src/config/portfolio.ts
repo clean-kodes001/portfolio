@@ -58,13 +58,13 @@ export const portfolioConfig = {
   name: "Dickson Anoibi",
   title: "Software Engineer",
   email: "anoibidickson@gmail.com",
-  location: "Minna, Niger State",
-  bio: "I have a strong background in both frontend and backend technologies, with over 5yrs of experience and a graduate of Computer Science (FUTMINNA, Nigeria), with a focus on React, Node.js, PHP and Java.",
-  about: `I'm a fullstack developer with over 4 years of experience in designing and implementing scalable applications.
+  location: "Lafia, Nasarawa State",
+  bio: "I have a strong background in both frontend and backend technologies, with a focus on React, Node.js, PHP and Java.",
+  about: `I'm a fullstack developer with over 5+ years of experience in designing and implementing scalable applications.
 `,
 
   // Resume/CV
-  resumeLink: "/Resume.pdf",
+  resumeLink: "/Miracles_CV.docx",
 
   // Social Links
   socialLinks: [
@@ -73,8 +73,7 @@ export const portfolioConfig = {
       url: "https://github.com/Dickson2020",
       icon: "github"
     },
-    {
-      name: "Whatsapp",
+    {name: "Whatsapp",
       url: "https://wa.me/+2348146360057",
       icon: "whatsapp"
     }
