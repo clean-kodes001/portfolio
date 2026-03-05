@@ -42,30 +42,7 @@ const ProjectsSection: React.FC = () => {
             </p>
           </div>
 
-          {/* MINIMALIST FILTER */}
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => setActiveFilter(tag)}
-                style={{
-                  padding: "8px 16px",
-                  borderRadius: 100,
-                  fontSize: 13,
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  border: "1px solid",
-                  borderColor: activeFilter === tag ? "#0f172a" : "#e2e8f0",
-                  background: activeFilter === tag ? "#0f172a" : "transparent",
-                  color: activeFilter === tag ? "#fff" : "#64748b",
-                  transition: "0.2s",
-                  textTransform: "capitalize"
-                }}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
+        
         </div>
       </div>
 
