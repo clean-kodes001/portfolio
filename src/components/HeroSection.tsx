@@ -14,16 +14,53 @@ const HeroSection = () => {
           {/* LEFT: CONTENT SIDE */}
           <div className="flex-1 space-y-8 order-2 lg:order-1">
             
-            {/* BREATHING HEADER */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 text-blue-600 font-mono text-xs font-bold tracking-[0.2em] uppercase">
-                <span className="w-8 h-[1px] bg-blue-600" />
-                Software Engineer
-              </div>
-              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-slate-900 leading-[1.1]">
-                {portfolioConfig.name}
-              </h1>
-            </div>
+           {/* BREATHING HEADER */}
+<div className="space-y-6">
+  {/* TOP TAGLINE */}
+  <div className="flex items-center gap-3 text-blue-600 font-mono text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
+    <span className="w-10 h-[2px] bg-blue-600" />
+    Software Engineer
+  </div>
+
+  {/* NAME */}
+  <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-slate-900 leading-[0.9]">
+    {portfolioConfig.name}
+  </h1>
+
+  {/* LOGISTICS BAR (The Upgrade) */}
+  <div className="flex flex-wrap items-center gap-y-3 gap-x-6 pt-2">
+    {/* Education Chip */}
+    <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl">
+      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+      <span className="text-xs font-black text-slate-900 uppercase tracking-tight">
+        B.Tech Computer Science
+      </span>
+    </div>
+
+    {/* Relocation Chip */}
+    <div className="flex items-center gap-2 group cursor-help">
+      <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+        <svg 
+          width="14" 
+          height="14" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="3" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div className="flex flex-col">
+        <span className="text-[10px] font-black text-slate-400 uppercase leading-none mb-1">Mobility</span>
+        <span className="text-xs font-bold text-slate-700 leading-none tracking-tight">Open to Relocation</span>
+      </div>
+    </div>
+  </div>
+</div>
 
             {/* BIO BENTO - Clean, no shadows, structured like Education cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
