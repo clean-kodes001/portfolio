@@ -20,7 +20,6 @@ const ProjectsSection: React.FC = () => {
     <section
       ref={sectionRef}
       style={{
-        padding: "120px 24px",
         background: "#ffffff",
         minHeight: "100vh",
       }}
@@ -47,9 +46,9 @@ const ProjectsSection: React.FC = () => {
       <div
         style={{
           display: "grid",
-          gap: "40px",
+          gap: "20px",
           gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-          maxWidth: "87%",
+          maxWidth: "80%",
           margin: "0 auto",
         }}
       >
