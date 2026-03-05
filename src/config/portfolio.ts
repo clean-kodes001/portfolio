@@ -59,14 +59,14 @@ name: "Dickson Anoibi",
 title: "Software Engineer",
 email: "anoibidickson@gmail.com",
 location: "Lafia, Nasarawa State, Nigeria",
-
-bio: `Full-Stack Software Engineer building scalable web & mobile apps since 2019. 
+bio: `Full-Stack Software Engineer turning ideas into real, scalable web & mobile apps since 2019.  
 | React • React Native • Node.js • PHP • Java  
 | JavaScript • TypeScript • HTML • CSS • Bootstrap  
 | MySQL • PostgreSQL • REST APIs • API Integration  
 | Git • Docker • AWS • CI/CD • Linux`,
 
-about: `⚡ React • React Native • Node.js • PHP • Java  
+about: `⚡ Turn any idea into a working, high-performance app  
+⚡ React • React Native • Node.js • PHP • Java  
 ⚡ JavaScript • TypeScript • HTML • CSS • Bootstrap  
 ⚡ MySQL • PostgreSQL • REST APIs • API Integration  
 ⚡ Git • Docker • AWS • CI/CD • Linux`,
@@ -147,6 +147,19 @@ about: `⚡ React • React Native • Node.js • PHP • Java
         website: "https://coinlyapp.io",
         text: 'Visit website'
       },
+      featured: true
+    },
+     {
+       id: "drone",
+title: "Military Drone DJI Software & API",
+description: "A full-featured mobile app for low-cost, nation-wide DJI drone monitoring, tracking, and remote control. Designed for secure operational management and rapid response across long distances.",
+tags: ["React Native", "TypeScript"],
+image: "/IMG_1324-1024x576.jpg",
+link: {
+  text: "Contact for Software Demo",
+  web_app: "https://wa.me/+2348146360057"
+},
+note: "Reach out to discuss access and implementation details for secure drone operations.",
       featured: true
     },
     {
