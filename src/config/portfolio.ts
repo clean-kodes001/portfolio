@@ -145,7 +145,7 @@ export const portfolioConfig = {
     },
     {
       id: "kudipoint",
-      title: "Kudipoint(Playstore & Appstore) - 2023",
+      title: "Kudipoint( Available on IOS Appstore) - 2023",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
       image: "/Screenshot_21-1-2026_172750_play.google.com.jpeg",
