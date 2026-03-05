@@ -169,6 +169,20 @@ export const portfolioConfig = {
       },
       featured: true
     },
+
+     {
+      id: "barade",
+      title: "RT. HON, Barade Website",
+      description: "Official website page for Governorship candidate barade for 2027 election.",
+      tags: ["HTML5", "PHP"],
+      image: "/barade.jpeg",
+      link: {
+        text: 'Visit website',
+        web_app: "https://baradepanetwork.org/barade/",
+
+      },
+      featured: true
+    },
     {
       id: "maize-farm-disease-detector",
       title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases",
