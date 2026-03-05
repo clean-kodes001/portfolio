@@ -38,7 +38,6 @@ const Index = () => {
       <Header />
       <HeroSection />
       <ProjectsSection />
-      <AboutSection />
       <ExperienceSection />
       <ContactSection />
       <ScrollToTopButton />
