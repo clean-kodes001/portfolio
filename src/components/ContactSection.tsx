@@ -49,7 +49,7 @@ const ContactSection = () => {
 
           {/* RIGHT: THE INTERACTIVE HUB */}
           <div className="lg:w-1/2 w-full">
-            <div className="bg-white rounded-[2.5rem] border border-slate-200 p-6 md:p-8 shadow-xl shadow-slate-200/40">
+            <div className="bg-white rounded-[2.5rem] border border-slate-200 p-6 md:p-8">
               
               <div className="space-y-6">
                 {/* EMAIL HUB */}
@@ -91,7 +91,7 @@ const ContactSection = () => {
                 {/* CALL TO ACTION */}
                 <Button 
                   onClick={handleQuickMail}
-                  className="w-full h-16 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg shadow-blue-500/20 group"
+                  className="w-full h-16 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg  group"
                 >
                   Message Me Directly
                   <Send size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
