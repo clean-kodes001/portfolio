@@ -131,6 +131,18 @@ export const portfolioConfig = {
 
   // Projects
   projects: [
+     {
+      id: "coinly",
+      title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
+      description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
+      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
+      image: "/coinly.jpg",
+      link: {
+        website: "https://coinlyapp.io",
+        text: 'Visit website'
+      },
+      featured: true
+    },
     {
       id: "kudipoint",
       title: "Kudipoint(Playstore & Appstore)",
@@ -144,18 +156,7 @@ export const portfolioConfig = {
       },
       featured: true
     },
-    {
-      id: "coinly",
-      title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
-      description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
-      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
-      image: "/coinly.jpg",
-      link: {
-        website: "https://coinlyapp.io",
-        text: 'Visit website'
-      },
-      featured: true
-    },
+   
     {
       id: "swift",
       title: "Swift Ride (2025) - IOS & Android",
