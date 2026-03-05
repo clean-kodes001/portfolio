@@ -54,15 +54,17 @@ export interface Education {
 
 // Main configuration for the portfolio
 export const portfolioConfig = {
-  // Personal Info
-  name: "Dickson Anoibi",
-  title: "Software Engineer",
-  email: "anoibidickson@gmail.com",
-  location: "Lafia, Nasarawa State",
-  bio: "Full-stack software engineer with over 5 years of experience across React, React-Native, Node.js, PHP, and Java, building real-world web and mobile applications used by paying customers. Skilled at turning business requirements into fast, secure, and scalable products using tools such as Git, AWS, MySQL/PostgreSQL, REST APIs, Docker, Jira, and CI/CD pipelines.",
-  about: `I'm a fullstack developer with over 5+ years of experience in designing and implementing scalable applications.
-`,
+// Personal Info
+name: "Dickson Anoibi",
+title: "Senior Software Engineer",
+email: "anoibidickson@gmail.com",
+location: "Lafia, Nasarawa State, Nigeria",
 
+bio: "Senior Software Engineer with professional experience since 2019, specializing in full-stack web and mobile application development. I have designed and delivered production systems using React, React Native, Node.js, PHP, and Java, building scalable platforms used by real customers and businesses. Experienced in translating complex business requirements into secure, high-performance products while maintaining clean architecture and maintainable codebases. Skilled with modern development tools including Git, AWS, Docker, MySQL/PostgreSQL, REST APIs, CI/CD pipelines, and Agile workflows using tools like Jira.",
+
+about: `I am a full-stack software engineer with over five years of professional experience building scalable digital products across web and mobile platforms. Since beginning my career in 2019, I have worked extensively with modern technologies including React, React Native, Node.js, PHP, and Java to develop reliable applications used by businesses and end users.
+
+My focus is on delivering efficient, maintainable, and well-architected systems that solve real business problems. I enjoy working across the entire development lifecycle—from product planning and system design to deployment and continuous improvement. I am passionate about building secure, scalable systems and collaborating with teams to ship high-quality software.`,
   // Resume/CV
   resumeLink: "/Miracles_CV.docx",
 
