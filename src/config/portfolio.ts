@@ -151,9 +151,9 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
      {
        id: "drone",
-title: "Military Drone DJI Software & API",
-description: "A full-featured mobile app for low-cost, nation-wide DJI drone monitoring, tracking, and remote control. Designed for secure operational management and rapid response across long distances.",
-tags: ["React Native", "TypeScript"],
+title: "Military Drone DJI Software(2023)",
+description: "A full-featured mobile app for low-cost, nation-wide DJI drone monitoring, tracking, and remote control.",
+tags: ["JAVA", "Websocket", "Nodejs"],
 image: "/IMG_1324-1024x576.jpg",
 link: {
   text: "Contact for Software Demo",
