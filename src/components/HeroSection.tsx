@@ -62,7 +62,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-8 pt-2">
               <Button asChild className="h-14 px-8 rounded-2xl bg-slate-900 text-white hover:bg-blue-700 transition-colors font-bold text-base border-none">
                 <a href={portfolioConfig.resumeLink} target="_blank" rel="noopener noreferrer">
-                  Download CV <ArrowRight size={18} className="ml-2" />
+                  View CV <ArrowRight size={18} className="ml-2" />
                 </a>
               </Button>
               
