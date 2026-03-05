@@ -70,7 +70,7 @@ about: `⚡ Turn any idea into a working, high-performance app
 ⚡ JavaScript • TypeScript • HTML • CSS • Bootstrap  
 ⚡ MySQL • PostgreSQL • REST APIs • API Integration  
 ⚡ Git • Docker • AWS • CI/CD • Linux`,
-  resumeLink: "/Miracles_CV.docx",
+  resumeLink: "/Dickson_Software_Engineer_CV.pdf",
 
   // Social Links
   socialLinks: [
