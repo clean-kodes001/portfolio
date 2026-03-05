@@ -34,15 +34,28 @@ const HeroSection = () => {
                 </p>
               </div>
               
-              <div className="p-6 bg-blue-600 rounded-2xl flex flex-col justify-between text-white min-h-[140px]">
-                <Sparkles size={20} className="text-blue-200 mb-4" />
-                <div>
-                  <p className="text-xs font-black uppercase tracking-widest opacity-70 mb-1">Focus</p>
-                  <p className="text-lg font-bold leading-tight">
-                    Building Scalable <br /> Digital Products.
-                  </p>
-                </div>
-              </div>
+             <div className="p-0 bg-blue-600 rounded-[2rem] flex flex-col justify-between min-h-[160px] overflow-hidden relative group">
+  {/* Large Background Icon */}
+  <Sparkles 
+    size={120} 
+    className="absolute -right-8 -top-8 text-blue-500/40 group-hover:scale-110 transition-transform duration-700" 
+  />
+
+  <div className="p-6 flex flex-col justify-between h-full relative z-10">
+    <div className="bg-white/10 w-fit px-3 py-1 rounded-full backdrop-blur-md">
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-100">
+        Focus Area
+      </p>
+    </div>
+
+    <div className="space-y-1">
+      <p className="text-2xl font-black text-white tracking-tight leading-none">
+        DIGITAL <br /> PRODUCTS.
+      </p>
+      <div className="w-8 h-1 bg-white rounded-full group-hover:w-16 transition-all duration-500" />
+    </div>
+  </div>
+</div>
             </div>
 
             {/* ACTION ROW */}
@@ -71,7 +84,7 @@ const HeroSection = () => {
                 <img
                   src="/profile.jpg" // Ensure this path is correct in your public folder
                   alt={portfolioConfig.name}
-                  className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+                  className="w-full h-full object-cover object-center  hover:grayscale-0 transition-all duration-700 ease-in-out"
                 />
                 
                 {/* Floating Info Tag */}
