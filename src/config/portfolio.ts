@@ -89,31 +89,17 @@ about: `⚡ Turn any idea into a working, high-performance app
   skills: [
     {
       category: "Frontend",
-      skills: [
-        { name: "Reactjs & Nextjs", level: 90 },
-        { name: "ReactNative", level: 90 },
-        { name: "Java Mobile Android", level: 85 },
-        { name: "Next.js", level: 80 },
-      ]
+      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Framer Motion"],
     },
     {
       category: "Backend",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "PostgreSQL", level: 70 },
-        { name: "Mysql", level: 90 },
-        { name: "Php", level: 97 },
-      ]
+      items: ["Node.js", "Express", "PostgreSQL", "Prisma", "MongoDB", "GraphQL"],
     },
     {
-      category: "Other",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "AI Automation", level: 70 },
-        { name: "Java & Android Studio Mobile Development", level: 70 },
-      ]
-    }
-  ] as SkillCategory[],
+      category: "Tools & Others",
+      items: ["Git", "Docker", "AWS", "Figma", "Jest", "CI/CD"],
+    },
+  ],
 
   // Experience
   experiences: [
