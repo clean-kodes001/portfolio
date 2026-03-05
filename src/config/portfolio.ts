@@ -74,6 +74,14 @@ about: `⚡ Turn any idea into a working, high-performance app
 
   // Social Links
   socialLinks: [
+     {name: "Linkedin",
+      url: "https://www.linkedin.com/in/dickson-anoibi-1458a33a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      icon: "linkedin"
+    },
+     {name: "Facebook",
+      url: "https://web.facebook.com/profile.php?id=61581537456477",
+      icon: "facebook"
+    },
     {
       name: "GitHub",
       url: "https://github.com/Dickson2020",
