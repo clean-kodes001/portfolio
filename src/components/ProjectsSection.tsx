@@ -38,29 +38,8 @@ const ProjectsSection: React.FC = () => {
           </div>
 
           {/* MINIMALIST FILTER */}
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 20 }}>
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => setActiveFilter(tag)}
-                style={{
-                  padding: "10px 20px",
-                  borderRadius: 12,
-                  fontSize: 14,
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  transition: "all 0.2s ease",
-                  border: "1px solid",
-                  borderColor: activeFilter === tag ? "#0f172a" : "#e2e8f0",
-                  background: activeFilter === tag ? "#0f172a" : "transparent",
-                  color: activeFilter === tag ? "#fff" : "#64748b",
-                  textTransform: "capitalize",
-                }}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
+          
+          
         </div>
       </div>
 
@@ -70,7 +49,7 @@ const ProjectsSection: React.FC = () => {
           display: "grid",
           gap: "40px",
           gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-          maxWidth: 1280,
+          maxWidth: "87%",
           margin: "0 auto",
         }}
       >
