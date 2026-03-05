@@ -145,7 +145,7 @@ export const portfolioConfig = {
     },
     {
       id: "kudipoint",
-      title: "Kudipoint(Playstore & Appstore)",
+      title: "Kudipoint(Playstore & Appstore) - 2023",
       description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
       tags: ["React Native", "TypeScript"],
       image: "/Screenshot_21-1-2026_172750_play.google.com.jpeg",
@@ -172,7 +172,7 @@ export const portfolioConfig = {
 
      {
       id: "barade",
-      title: "RT. HON, Barade Website",
+      title: "RT. HON, Barade Website - 2026",
       description: "Official website page for Governorship candidate barade for 2027 election.",
       tags: ["HTML5", "PHP"],
       image: "/barade.jpeg",
@@ -185,7 +185,7 @@ export const portfolioConfig = {
     },
     {
       id: "maize-farm-disease-detector",
-      title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases",
+      title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases (2024)",
       description: "A smart, AI-powered physical system designed to detect and treat maize leaf diseases such as blight, rust, and leaf spot. The system integrates computer vision, Raspberry Pi, and chemical spraying actuators to automatically identify infected maize leaves using a trained AI model and apply targeted treatment through controlled chemical dispensing.",
       tags: ["Raspberry PI", "Python3", "Sci-kit learn", "M.L", "A.I"],
       image: "/Screenshot_12-11-2025_93620_.jpeg",
