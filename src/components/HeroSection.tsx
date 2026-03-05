@@ -22,11 +22,30 @@ const HeroSection = () => {
     <span className="w-10 h-[2px] bg-blue-600" />
     Software Engineer
   </div>
-
-  {/* NAME */}
-  <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-slate-900 leading-[0.9]">
+{/* NAME + AKA CONTAINER */}
+<div className="space-y-3 mt-4">
+  <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-slate-900 leading-[0.85]">
     {portfolioConfig.name}
   </h1>
+  
+  <div className="flex items-center gap-4 group">
+    {/* Technical Tag Style */}
+    <div className="flex items-center bg-slate-900 px-2 py-1 rounded-md transform -rotate-2 group-hover:rotate-0 transition-transform duration-300">
+      <span className="text-[10px] font-mono font-black text-blue-400 italic tracking-widest">
+        AKA
+      </span>
+    </div>
+
+    {/* Elegant Identity Style */}
+    <div className="relative">
+      <span className="text-2xl md:text-4xl font-serif italic text-slate-400 tracking-tight transition-colors duration-500 group-hover:text-blue-600">
+        Miracle Adah
+      </span>
+      {/* Subtle underline that expands on hover - No Shadow */}
+      <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full" />
+    </div>
+  </div>
+</div>
 
   {/* LOGISTICS BAR (The Upgrade) */}
   <div className="flex flex-wrap items-center gap-y-3 gap-x-6 pt-2">
