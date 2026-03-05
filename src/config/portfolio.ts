@@ -188,7 +188,7 @@ export const portfolioConfig = {
       title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases (2024)",
       description: "A smart, AI-powered physical system designed to detect and treat maize leaf diseases such as blight, rust, and leaf spot. The system integrates computer vision, Raspberry Pi, and chemical spraying actuators to automatically identify infected maize leaves using a trained AI model and apply targeted treatment through controlled chemical dispensing.",
       tags: ["Raspberry PI", "Python3", "Sci-kit learn", "M.L", "A.I"],
-      image: "/Screenshot_12-11-2025_93620_.jpeg",
+      image: "/Screenshot_5-3-2026_12641_portfolio-zeta-nine-fqlbdmabv0.vercel.app.jpeg",
       link: {
         website: "/thesis.pdf",
         web_app: "/fork-of-98-accurate-maize-leaf-disease-detect.ipynb",
