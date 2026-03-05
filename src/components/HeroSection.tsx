@@ -59,6 +59,11 @@ const HeroSection = () => {
         <span className="text-[10px] font-black text-slate-400 uppercase leading-none mb-1">Mobility</span>
         <span className="text-xs font-bold text-slate-700 leading-none tracking-tight">Open to Relocation For Jobs</span>
       </div>
+
+       <div className="flex flex-col">
+        <span className="text-[10px] font-black text-slate-400 uppercase leading-none mb-1">Current Location</span>
+        <span className="text-xs font-bold text-slate-700 leading-none tracking-tight">Lafia, Nasarawa (Temporary)</span>
+      </div>
     </div>
   </div>
 </div>
