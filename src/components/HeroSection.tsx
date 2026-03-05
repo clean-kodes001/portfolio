@@ -33,7 +33,7 @@ const HeroSection = () => {
     <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl">
       <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
       <span className="text-xs font-black text-slate-900 uppercase tracking-tight">
-        B.Tech Computer Science
+        B.Tech Computer Science | FUTMINNA (Graduated)
       </span>
     </div>
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
       </div>
       <div className="flex flex-col">
         <span className="text-[10px] font-black text-slate-400 uppercase leading-none mb-1">Mobility</span>
-        <span className="text-xs font-bold text-slate-700 leading-none tracking-tight">Open to Relocation</span>
+        <span className="text-xs font-bold text-slate-700 leading-none tracking-tight">Open to Relocation For Jobs</span>
       </div>
     </div>
   </div>
