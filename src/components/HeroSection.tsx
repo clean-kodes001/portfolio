@@ -82,7 +82,7 @@ const HeroSection = () => {
               {/* THE PHOTO CONTAINER */}
               <div className="relative w-64 h-64 md:w-[380px] md:h-[480px] bg-slate-100 rounded-[2.5rem] overflow-hidden border border-slate-100">
                 <img
-                  src="/WhatsApp Image 2025-06-17 at 19.58.36_9035c1c3 - Copy.jpg" // Ensure this path is correct in your public folder
+                  src="/profile.jpg" // Ensure this path is correct in your public folder
                   alt={portfolioConfig.name}
                   className="w-full h-full object-cover object-center  hover:grayscale-0 transition-all duration-700 ease-in-out"
                 />
