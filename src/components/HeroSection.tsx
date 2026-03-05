@@ -7,8 +7,8 @@ import SocialLinks from './SocialLinks';
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-[90vh] flex items-center bg-white py-12">
-    </br>
-      <div className="container-wide max-w-6xl mx-auto px-6">
+    
+      <div className="container-wide max-w-6xl mx-auto px-6 mt-20">
         
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
