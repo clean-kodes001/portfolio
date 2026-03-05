@@ -60,9 +60,12 @@ title: "Software Engineer",
 email: "anoibidickson@gmail.com",
 location: "Lafia, Nasarawa State, Nigeria",
 
-bio: "Software Engineer since 2019 building web and mobile apps.",
+bio: "Full-Stack Software Engineer building scalable web & mobile apps since 2019.",
 
-about: `Full-stack developer skilled in React, React Native, Node.js, PHP, and Java.`,
+about: `⚡ React • React Native • Node.js • PHP • Java  
+⚡ JavaScript • TypeScript • HTML • CSS • Bootstrap  
+⚡ MySQL • PostgreSQL • REST APIs • API Integration  
+⚡ Git • Docker • AWS • CI/CD • Linux`,
   resumeLink: "/Miracles_CV.docx",
 
   // Social Links
