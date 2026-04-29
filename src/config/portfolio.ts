@@ -143,6 +143,18 @@ about: `⚡ Turn any idea into a working, high-performance app
       },
       featured: true
     },
+    {
+      id: "vendoor",
+      title: "Vendoor Multipurpose Buy/Sell E-commerce  - 2026",
+      description: "A web-based multipurpose e-commerce platform for vendors and buyers, connecting noth buyers and sellers seamlessly...",
+      tags: ["NextJs","Nodejs"],
+      image: "/IMG-20260421-WA0003.jpg",
+      link: {
+        website: "https://vendoor.ng",
+        text: 'Visit website'
+      },
+      featured: true
+    },
      {
        id: "drone",
 title: "Military Drone DJI Software(2023)",
