@@ -28,23 +28,7 @@ const HeroSection = () => {
     {portfolioConfig.name}
   </h1>
   
-  <div className="flex items-center gap-4 group">
-    {/* Technical Tag Style */}
-    <div className="flex items-center bg-slate-900 px-2 py-1 rounded-md transform -rotate-2 group-hover:rotate-0 transition-transform duration-300">
-      <span className="text-[10px] font-mono font-black text-blue-400 italic tracking-widest">
-        AKA
-      </span>
-    </div>
-
-    {/* Elegant Identity Style */}
-    <div className="relative">
-      <span className="text-2xl md:text-4xl font-serif italic text-slate-400 tracking-tight transition-colors duration-500 group-hover:text-blue-600">
-        Miracle Adah
-      </span>
-      {/* Subtle underline that expands on hover - No Shadow */}
-      <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full" />
-    </div>
-  </div>
+ 
 </div>
 
   {/* LOGISTICS BAR (The Upgrade) */}
@@ -103,20 +87,7 @@ const HeroSection = () => {
     className="absolute -right-8 -top-8 text-blue-500/40 group-hover:scale-110 transition-transform duration-700" 
   />
 
-  <div className="p-6 flex flex-col justify-between h-full relative z-10">
-    <div className="bg-white/10 w-fit px-3 py-1 rounded-full backdrop-blur-md">
-      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-100">
-        Focus Area
-      </p>
-    </div>
-
-    <div className="space-y-1">
-      <p className="text-2xl font-black text-white tracking-tight leading-none">
-        DIGITAL <br /> PRODUCTS.
-      </p>
-      <div className="w-8 h-1 bg-white rounded-full group-hover:w-16 transition-all duration-500" />
-    </div>
-  </div>
+ 
 </div>
             </div>
 
@@ -144,7 +115,7 @@ const HeroSection = () => {
               {/* THE PHOTO CONTAINER */}
               <div className="relative w-64 h-64 md:w-[380px] md:h-[480px] bg-slate-100 rounded-[2.5rem] overflow-hidden border border-slate-100">
                 <img
-                  src="/profile.jpg" // Ensure this path is correct in your public folder
+                  src="/myprofilepic.jpeg" // Ensure this path is correct in your public folder
                   alt={portfolioConfig.name}
                   className="w-full h-full object-cover object-center  hover:grayscale-0 transition-all duration-700 ease-in-out"
                 />
