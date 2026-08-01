@@ -80,15 +80,7 @@ const HeroSection = () => {
                 </p>
               </div>
               
-             <div className="p-0 bg-blue-600 rounded-[2rem] flex flex-col justify-between min-h-[160px] overflow-hidden relative group">
-  {/* Large Background Icon */}
-  <Sparkles 
-    size={120} 
-    className="absolute -right-8 -top-8 text-blue-500/40 group-hover:scale-110 transition-transform duration-700" 
-  />
-
- 
-</div>
+          
             </div>
 
             {/* ACTION ROW */}
