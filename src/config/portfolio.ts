@@ -168,19 +168,7 @@ link: {
 note: "Reach out to discuss access and implementation details for secure drone operations.",
       featured: true
     },
-    {
-      id: "kudipoint",
-      title: "Kudipoint( Available on IOS Appstore) - 2023",
-      description: "A full-featured mobile app for Send & Receive money, gift cards trade, bill payments and more",
-      tags: ["React Native", "TypeScript"],
-      image: "/Screenshot_21-1-2026_172750_play.google.com.jpeg",
-      link: {
-        text: 'Visit website',
-        web_app: "https://kudipoint.ng/",
-
-      },
-      featured: true
-    },
+   
    
     {
       id: "swift",
