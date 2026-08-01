@@ -172,13 +172,13 @@ note: "Reach out to discuss access and implementation details for secure drone o
    
     {
       id: "swift",
-      title: "Swift Ride (2025) - IOS & Android",
+      title: "Swift Ride (2025) - IOS & Android (New App Built, Old app deprecated)",
       description: "A full-featured mobile app for booking ride within Nigeria.",
-      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "React"],
+      tags: ["React Native", "EXPO", "MYSQL", "Pusher", "Laravel"],
       image: "/Screenshot_21-1-2026_172524_play.google.com.jpeg",
       link: {
-        text: "Visit website",
-        website: "https://swiftpickup.com.ng/",
+        text: "Download Latest APK",
+        web_app: "https://expo.dev/artifacts/eas/58qXA9sLx6sy9hD5PD-PXHluqGMO3Dc2PWJXI8RX_Ow.apk",
       },
       featured: true
     },
