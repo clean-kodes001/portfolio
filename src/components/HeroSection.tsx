@@ -121,7 +121,7 @@ const HeroSection = () => {
                 />
                 
                 {/* Floating Info Tag */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-between">
+                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-between" style={{marginTop:'40px'}}>
                   <div>
                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Available For</p>
                     <p className="text-xs font-bold text-slate-900">Remote / Hybrid (Full or Part time)</p>
