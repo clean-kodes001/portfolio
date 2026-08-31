@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { portfolioConfig } from '../config/portfolio';
 import { ArrowUp } from 'lucide-react';
@@ -12,34 +11,40 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary py-12">
-      <div className="container-wide">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">
+    <footer className="bg-white border-t border-gray-100 py-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* LEFT: Name & Title */}
+          <div className="text-center md:text-left">
+            <h3 className="text-base font-light text-gray-900 tracking-[-0.02em]">
               {portfolioConfig.name}
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-xs font-light text-gray-400 mt-0.5">
               {portfolioConfig.title}
             </p>
           </div>
           
-          <div className="mb-6 md:mb-0">
+          {/* CENTER: Social Links */}
+          <div className="flex items-center gap-4">
             <SocialLinks />
           </div>
           
+          {/* RIGHT: Scroll to Top */}
           <button 
             onClick={scrollToTop}
-            className="bg-portfolio-600 text-white p-3 rounded-full hover:bg-portfolio-700 transition-colors"
+            className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
             aria-label="Scroll to top"
           >
-            <ArrowUp size={20} />
+            <ArrowUp size={18} strokeWidth={1.5} />
           </button>
         </div>
         
-        <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} {portfolioConfig.name}. All Rights Reserved.</p>
-          <p className="text-sm mt-1">
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-100 mt-8 pt-6 text-center">
+          <p className="text-[10px] font-light text-gray-400 tracking-wide">
+            &copy; {currentYear} {portfolioConfig.name}. All rights reserved.
+          </p>
+          <p className="text-[9px] font-light text-gray-300 mt-1 tracking-wider">
             Built with React & Tailwind CSS
           </p>
         </div>
