@@ -37,7 +37,7 @@ const Header = () => {
             {/* LOGO - Clean typography */}
             <a href="#" className="group">
               <span className="text-2xl font-light tracking-[-0.02em] text-gray-900">
-                Miracle
+                CodeWithMiracle🧋
                 <span className="text-gray-300 font-thin ml-0.5">.</span>
               </span>
             </a>
