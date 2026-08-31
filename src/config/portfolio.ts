@@ -70,7 +70,7 @@ about: `⚡ Turn any idea into a working, high-performance app
 ⚡ JavaScript • TypeScript • HTML • CSS • Bootstrap  
 ⚡ MySQL • PostgreSQL • REST APIs • API Integration  
 ⚡ Git • Docker • AWS • CI/CD • Linux`,
-  resumeLink: "/Software_Engineer_Dickson_Miracle_CV.pdf",
+  resumeLink: "/Anoibi_Dickson_Miracle_Software_Engineer.pdf",
 
   // Social Links
   socialLinks: [
@@ -116,7 +116,7 @@ about: `⚡ Turn any idea into a working, high-performance app
       company: "Coinly Limited",
       location: "Minna, Nigeria",
       startDate: "Nov 2024",
-      endDate: "Present",
+      endDate: "Feb 2026",
       description: "Lead developer for the company's offical mobile app",
       bullets: [
         "Developed and maintained major features of the company's mobile app using React Native and TypeScript",
