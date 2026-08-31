@@ -58,7 +58,7 @@ export const portfolioConfig = {
 name: "Dickson Anoibi",
 title: "Software Engineer",
 email: "anoibidickson@gmail.com",
-location: "Lafia, Nasarawa State, Nigeria",
+location: "Abuja, Nigeria",
 bio: `Full-Stack Software Engineer turning ideas into real, scalable web & mobile apps since 2019.  
 | React • React Native • Node.js • PHP • Java  
 | JavaScript • TypeScript • HTML • CSS • Bootstrap  
