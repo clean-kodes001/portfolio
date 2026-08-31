@@ -146,9 +146,9 @@ about: `⚡ Turn any idea into a working, high-performance app
     {
       id: "Kudipoint",
       title: "Kudipoint Mobile App(Apk Available) - 2024",
-      description: "A full-featured mobile app for bill payments transactions, and more.",
+      description: "A full-featured mobile app for sending and receiving money nationwide, and more.",
       tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
-      image: "/coinly.jpg",
+      image: "/Gemini_Generated_Image_z3ma1sz3ma1sz3ma.jpg",
       link: {
         website: "https://wa.me/+2348146360057",
         text: 'Get APK file'
