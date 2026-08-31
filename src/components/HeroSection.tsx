@@ -1,99 +1,144 @@
 import React from 'react';
 import { portfolioConfig } from '../config/portfolio';
-import { ArrowRight, MapPin, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowRight, MapPin, GraduationCap, Sparkles, Briefcase } from 'lucide-react';
 import SocialLinks from './SocialLinks';
 
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center bg-white">
-      <div className="max-w-6xl mx-auto px-6 py-20 mt-12">
+      <div className="max-w-6xl mx-auto px-6 py-24 mt-8">
         
-        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-20 lg:gap-24">
           
           {/* LEFT: CONTENT */}
-          <div className="flex-1 space-y-10 order-2 lg:order-1 pt-8">
+          <div className="flex-1 space-y-12 order-2 lg:order-1">
             
-            {/* TAGLINE */}
-            <div className="space-y-2">
-              <p className="text-sm font-light text-gray-400 tracking-[0.2em] uppercase">
-                Software Engineer
-              </p>
+            {/* STATUS INDICATOR - Subtle pill */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-50 rounded-full border border-gray-100">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span className="text-[10px] font-medium text-gray-500 tracking-[0.15em] uppercase">
+                Open to Work
+              </span>
             </div>
 
-            {/* NAME */}
-            <h1 className="text-6xl md:text-8xl font-light tracking-[-0.03em] text-gray-900 leading-[0.9]">
+            {/* NAME - Bold but refined */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-[-0.03em] text-gray-900 leading-[0.92]">
               {portfolioConfig.name}
             </h1>
 
-            {/* INFO STRIP - Clean, no boxes */}
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-2">
-              <div className="flex items-center gap-3">
-                <GraduationCap size={16} className="text-gray-300" strokeWidth={1.5} />
-                <span className="text-sm font-light text-gray-600">
-                  B.Tech Computer Science
-                </span>
-                <span className="text-sm font-light text-gray-300">·</span>
-                <span className="text-sm font-light text-gray-600">FUTMINNA</span>
+            {/* TAGLINE - Clean divider approach */}
+            <div className="flex items-center gap-4">
+              <span className="w-8 h-px bg-gray-300" />
+              <span className="text-sm font-light text-gray-400 tracking-[0.15em] uppercase">
+                Software Engineer
+              </span>
+            </div>
+
+            {/* INFO GRID - Minimal cards with radius */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div className="flex items-center gap-3 px-4 py-3 bg-gray-50/70 rounded-xl border border-gray-100/50">
+                <div className="p-1.5 bg-white rounded-lg border border-gray-100">
+                  <GraduationCap size={14} className="text-gray-400" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">
+                    Education
+                  </p>
+                  <p className="text-sm font-light text-gray-700">
+                    B.Tech CS · FUTMINNA
+                  </p>
+                </div>
               </div>
               
-              <div className="flex items-center gap-3">
-                <MapPin size={16} className="text-gray-300" strokeWidth={1.5} />
-                <span className="text-sm font-light text-gray-600">
-                  Open to Relocation
-                </span>
+              <div className="flex items-center gap-3 px-4 py-3 bg-gray-50/70 rounded-xl border border-gray-100/50">
+                <div className="p-1.5 bg-white rounded-lg border border-gray-100">
+                  <MapPin size={14} className="text-gray-400" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">
+                    Location
+                  </p>
+                  <p className="text-sm font-light text-gray-700">
+                    Open to Relocation
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* BIO - Clean paragraph */}
-            <p className="text-base font-light text-gray-500 leading-relaxed max-w-xl">
+            {/* BIO - Refined paragraph */}
+            <p className="text-base font-light text-gray-500 leading-relaxed max-w-xl border-l-2 border-gray-200 pl-6">
               {portfolioConfig.bio}
             </p>
 
-            {/* ACTION ROW - Clean links */}
-            <div className="flex flex-wrap items-center gap-10 pt-4">
+            {/* ACTION ROW - Enhanced with subtle radius */}
+            <div className="flex flex-wrap items-center gap-8 pt-2">
               <a
                 href={portfolioConfig.resumeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-base font-medium text-gray-900 hover:text-gray-500 transition-colors duration-200"
+                className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-all duration-300 text-sm font-medium"
               >
-                View CV
+                View Resume
                 <ArrowRight 
-                  size={18} 
-                  className="group-hover:translate-x-1 transition-transform duration-200" 
-                  strokeWidth={1.5}
+                  size={16} 
+                  className="group-hover:translate-x-1 transition-transform duration-300" 
+                  strokeWidth={2}
                 />
               </a>
               
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4">
+                <span className="text-[10px] font-medium text-gray-300 uppercase tracking-wider">
+                  Connect
+                </span>
                 <SocialLinks />
               </div>
             </div>
           </div>
 
-          {/* RIGHT: PHOTO - Minimal geometric */}
-          <div className="lg:w-[420px] order-1 lg:order-2">
+          {/* RIGHT: PHOTO - Enhanced with subtle radius */}
+          <div className="lg:w-[440px] order-1 lg:order-2">
             <div className="relative">
-              {/* Simple geometric accents - No shadows */}
-              <div className="absolute -top-6 -right-6 w-16 h-16 border-t border-gray-200" />
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b border-gray-200" />
+              {/* Geometric accents - refined */}
+              <div className="absolute -top-6 -right-6 w-20 h-20 border-t-2 border-r-2 border-gray-200 rounded-tr-2xl" />
+              <div className="absolute -bottom-6 -left-6 w-20 h-20 border-b-2 border-l-2 border-gray-200 rounded-bl-2xl" />
+              <div className="absolute top-1/2 -left-8 w-12 h-12 border-l-2 border-t-2 border-gray-100/50 rounded-tl-xl" />
               
-              {/* Photo container - Pure border */}
-              <div className="relative w-64 h-64 md:w-[400px] md:h-[480px] bg-gray-50 overflow-hidden border border-gray-100">
+              {/* Photo container - Subtle radius */}
+              <div className="relative w-72 h-72 md:w-[420px] md:h-[500px] bg-gray-50 rounded-3xl overflow-hidden border border-gray-100/80">
                 <img
                   src="/myprofilepic.jpeg"
                   alt={portfolioConfig.name}
                   className="w-full h-full object-cover object-center"
                 />
                 
-                {/* Availability - Clean text overlay */}
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="border-t border-gray-200 pt-4">
-                    <p className="text-xs font-light text-gray-400 uppercase tracking-[0.15em]">
-                      Available for
-                    </p>
-                    <p className="text-sm font-light text-gray-700 mt-1">
-                      Remote / Hybrid (Full or Part time)
+                {/* Availability overlay - Refined */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white/50 px-5 py-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-[10px] font-medium text-gray-400 uppercase tracking-[0.15em]">
+                          Available for
+                        </p>
+                        <p className="text-sm font-light text-gray-700 mt-0.5">
+                          Remote · Hybrid · Full/Part time
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 rounded-full border border-emerald-100/50">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                        <span className="text-[10px] font-medium text-emerald-700">
+                          Active
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Experience badge - Floating */}
+                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/50 px-4 py-3">
+                  <div className="text-center">
+                    <p className="text-lg font-light text-gray-900">3+</p>
+                    <p className="text-[9px] font-medium text-gray-400 uppercase tracking-wider">
+                      Years Exp.
                     </p>
                   </div>
                 </div>
