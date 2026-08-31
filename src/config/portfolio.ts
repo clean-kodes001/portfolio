@@ -144,6 +144,18 @@ about: `⚡ Turn any idea into a working, high-performance app
       featured: true
     },
     {
+      id: "Kudipoint",
+      title: "Kudipoint Mobile App(Apk Available) - 2024",
+      description: "A full-featured mobile app for bill payments transactions, and more.",
+      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
+      image: "/coinly.jpg",
+      link: {
+        website: "https://wa.me/+2348146360057",
+        text: 'Get APK file'
+      },
+      featured: true
+    },
+    {
       id: "vendoor",
       title: "Vendoor Multipurpose Buy/Sell E-commerce  - 2026",
       description: "A web-based multipurpose e-commerce platform for vendors and buyers, connecting noth buyers and sellers seamlessly...",
