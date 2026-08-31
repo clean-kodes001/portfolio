@@ -247,6 +247,6 @@ note: "Reach out to discuss access and implementation details for secure drone o
   contactInfo: {
     email: "anoibidickson@gmail.com",
     phone: "+234 814 636 0057",
-    location: "Lafia, Nasarawa State"
+    location: "Abuja, Nigeria"
   }
 };
