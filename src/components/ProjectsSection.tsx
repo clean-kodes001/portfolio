@@ -21,7 +21,6 @@ const ProjectsSection: React.FC = () => {
   const [visibleProjects, setVisibleProjects] = useState<Project[]>(portfolioConfig.projects);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  // Extract unique tags
   const allTags = ["all", ...new Set(portfolioConfig.projects.flatMap((p) => p.tags))];
 
   useEffect(() => {
@@ -39,35 +38,34 @@ const ProjectsSection: React.FC = () => {
         {/* HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           {/* LEFT: TITLE */}
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2">
-              <span className="w-6 h-px bg-gray-300" />
-              <span className="text-[10px] font-medium text-gray-400 tracking-[0.2em] uppercase">
+          <div className="space-y-5">
+            <div className="inline-flex items-center gap-3">
+              <span className="w-8 h-px bg-gray-300" />
+              <span className="text-xs font-medium text-gray-400 tracking-[0.2em] uppercase">
                 Projects
               </span>
             </div>
             
             <h2 className="text-5xl md:text-6xl font-light tracking-[-0.03em] text-gray-900 leading-[0.9]">
-              Selected <span className="font-medium">Works</span>
+              Selected <span className="font-normal">Works</span>
             </h2>
             
-            <p className="text-sm font-light text-gray-400 max-w-md leading-relaxed">
-              "To protect intellectual property, I only showcase projects where explicit 
-              <span className="text-gray-600"> client consent</span> has been granted."
+            <p className="text-sm text-gray-500 max-w-md leading-relaxed">
+              "To protect intellectual property, I only showcase projects where explicit{' '}
+              <span className="text-gray-700 font-medium">client consent</span> has been granted."
             </p>
           </div>
 
-          {/* RIGHT: FILTER - Minimal approach */}
+          {/* RIGHT: FILTER */}
           <div className="flex items-center gap-4">
-            {/* Desktop Filters */}
             <div className="hidden md:flex items-center gap-1">
               {allTags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setActiveFilter(tag)}
-                  className={`px-4 py-2 text-xs font-light transition-colors duration-200 ${
+                  className={`px-4 py-2 text-xs font-medium transition-colors duration-200 ${
                     activeFilter === tag
-                      ? "text-gray-900 bg-gray-100"
+                      ? "text-gray-900 bg-gray-100/80"
                       : "text-gray-400 hover:text-gray-600"
                   }`}
                 >
@@ -76,10 +74,9 @@ const ProjectsSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Mobile Filter Toggle */}
             <button
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className="md:hidden flex items-center gap-2 px-4 py-2 text-xs font-light text-gray-600 hover:text-gray-900 transition-colors"
+              className="md:hidden flex items-center gap-2 px-4 py-2 text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors"
             >
               <Filter size={14} strokeWidth={1.5} />
               {activeFilter === "all" ? "Filter" : activeFilter}
@@ -88,7 +85,7 @@ const ProjectsSection: React.FC = () => {
         </div>
 
         {/* PROJECT GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleProjects.map((project) => (
             <div
               key={project.id}
@@ -108,13 +105,12 @@ const ProjectsSection: React.FC = () => {
                   </div>
                 )}
                 
-                {/* Tags overlay on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 bg-white/20 backdrop-blur-sm text-white text-[8px] font-medium uppercase tracking-wider"
+                        className="px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-[10px] font-medium uppercase tracking-wider"
                       >
                         {tag}
                       </span>
@@ -125,25 +121,24 @@ const ProjectsSection: React.FC = () => {
 
               {/* CONTENT */}
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="text-lg font-light text-gray-900 tracking-[-0.02em]">
+                <h3 className="text-lg font-medium text-gray-900 tracking-[-0.02em]">
                   {project.title}
                 </h3>
                 
-                <p className="text-sm font-light text-gray-400 leading-relaxed mt-2 flex-1">
+                <p className="text-sm text-gray-500 leading-relaxed mt-2 flex-1">
                   {project.description}
                 </p>
 
-                {/* LINKS */}
-                <div className="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-6 mt-6 pt-4 border-t border-gray-100">
                   {project.link?.live && (
                     <a
                       href={project.link.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-900 hover:text-gray-500 transition-colors duration-200"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-gray-500 transition-colors duration-200"
                     >
                       {project.link?.text || 'View Project'}
-                      <ArrowUpRight size={12} strokeWidth={2} />
+                      <ArrowUpRight size={14} strokeWidth={2} />
                     </a>
                   )}
                   
@@ -152,10 +147,10 @@ const ProjectsSection: React.FC = () => {
                       href={project.link.website || project.link.web_app}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                      className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors duration-200"
                     >
                       Website
-                      <ArrowUpRight size={12} strokeWidth={2} />
+                      <ArrowUpRight size={14} strokeWidth={1.5} />
                     </a>
                   )}
                 </div>
@@ -167,12 +162,12 @@ const ProjectsSection: React.FC = () => {
         {/* EMPTY STATE */}
         {visibleProjects.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-sm font-light text-gray-400">
+            <p className="text-sm text-gray-400">
               No projects found for "{activeFilter}"
             </p>
             <button
               onClick={() => setActiveFilter("all")}
-              className="mt-4 text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              className="mt-4 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
             >
               View all projects
             </button>
@@ -185,7 +180,7 @@ const ProjectsSection: React.FC = () => {
         <div className="fixed inset-0 z-50 bg-white md:hidden">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <span className="text-sm font-light text-gray-600">Filter Projects</span>
+              <span className="text-sm font-medium text-gray-600">Filter Projects</span>
               <button
                 onClick={() => setIsFilterOpen(false)}
                 className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
@@ -195,7 +190,7 @@ const ProjectsSection: React.FC = () => {
             </div>
             
             <div className="flex-1 overflow-y-auto p-6">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 {allTags.map((tag) => (
                   <button
                     key={tag}
@@ -203,15 +198,15 @@ const ProjectsSection: React.FC = () => {
                       setActiveFilter(tag);
                       setIsFilterOpen(false);
                     }}
-                    className={`flex items-center justify-between py-3 px-4 text-sm font-light transition-colors ${
+                    className={`flex items-center justify-between py-4 px-4 text-sm font-medium transition-colors ${
                       activeFilter === tag
-                        ? "bg-gray-100 text-gray-900"
+                        ? "bg-gray-100/80 text-gray-900"
                         : "text-gray-400 hover:text-gray-600"
                     }`}
                   >
                     <span>{tag === "all" ? "All Projects" : tag}</span>
                     {activeFilter === tag && (
-                      <span className="w-4 h-px bg-gray-400" />
+                      <span className="w-5 h-px bg-gray-400" />
                     )}
                   </button>
                 ))}
