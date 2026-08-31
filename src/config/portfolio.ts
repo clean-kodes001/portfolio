@@ -146,7 +146,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     {
       id: "Kudipoint",
       title: "Kudipoint Mobile App(Apk Available) - 2024",
-      description: "A full-featured mobile app for sending and receiving money nationwide, and more.",
+      description: "A full-featured mobile app for sending and receiving money nationwide, and more. CONTACT ME @ 08146360057(Whatsapp) FOR APK FILE. APP UNDER REVIEW ON APPSTORE AND PLAYSTORE",
       tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
       image: "/Gemini_Generated_Image_z3ma1sz3ma1sz3ma.jpg",
       link: {
