@@ -1,168 +1,225 @@
 import React, { useEffect, useState } from "react";
 import { portfolioConfig } from "../config/portfolio";
+import { ArrowUpRight, Filter, X } from "lucide-react";
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  tags: string[];
+  link?: {
+    live?: string;
+    website?: string;
+    web_app?: string;
+    text?: string;
+  };
+}
 
 const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [visibleProjects, setVisibleProjects] = useState(portfolioConfig.projects);
+  const [visibleProjects, setVisibleProjects] = useState<Project[]>(portfolioConfig.projects);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
+  // Extract unique tags
   const allTags = ["all", ...new Set(portfolioConfig.projects.flatMap((p) => p.tags))];
 
   useEffect(() => {
     setVisibleProjects(
-      activeFilter === "all" 
-        ? portfolioConfig.projects 
+      activeFilter === "all"
+        ? portfolioConfig.projects
         : portfolioConfig.projects.filter((p) => p.tags.includes(activeFilter))
     );
   }, [activeFilter]);
 
   return (
-    <section
-      style={{
-        background: "#ffffff",
-        minHeight: "100vh",
-        width: "100%",
-        padding: "60px 0", // Vertical padding only
-        overflowX: "hidden", // Safety net
-      }}
-    >
-      {/* HEADER & FILTER BAR - Wrapped in a centered container */}
-      <div style={{ 
-        maxWidth: 1200, 
-        margin: "0 auto 40px auto", 
-        padding: "0 20px", // Standard side padding
-        boxSizing: "border-box" 
-      }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-  {/* LEFT: TITLE & SUBTEXT */}
-  <div className="space-y-4">
-    <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full border border-slate-200">
-      <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-      <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Portfolio</span>
-    </div>
-    
-    <h2 style={{ fontSize: "clamp(40px, 8vw, 64px)", fontWeight: 900, color: "#0f172a", lineHeight: 0.9, letterSpacing: "-0.05em" }}>
-      Selected <span className="text-blue-600 italic font-serif">Works.</span>
-    </h2>
-    
-    <p style={{ color: "#64748b", fontSize: 18, maxWidth: 500, lineHeight: 1.4, fontWeight: 500 }}>
-      <p className="text-[13px] leading-snug font-bold text-slate-500 italic">
-      "To protect intellectual property, I only showcase projects where explicit <span className="text-slate-900">client consent</span> has been granted."
-    </p>
-    </p>
-  </div>
-
-</div>
-
+    <section className="min-h-screen bg-white py-24">
+      <div className="max-w-6xl mx-auto px-6">
         
-        </div>
-      </div>
+        {/* HEADER */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          {/* LEFT: TITLE */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2">
+              <span className="w-6 h-px bg-gray-300" />
+              <span className="text-[10px] font-medium text-gray-400 tracking-[0.2em] uppercase">
+                Projects
+              </span>
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light tracking-[-0.03em] text-gray-900 leading-[0.9]">
+              Selected <span className="font-medium">Works</span>
+            </h2>
+            
+            <p className="text-sm font-light text-gray-400 max-w-md leading-relaxed">
+              "To protect intellectual property, I only showcase projects where explicit 
+              <span className="text-gray-600"> client consent</span> has been granted."
+            </p>
+          </div>
 
-      {/* PROJECT GRID - Standard padding and mobile-friendly minmax */}
-      <div
-        style={{
-          display: "grid",
-          gap: "24px",
-          // Changed to 280px so it fits even small iPhones (320px width)
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 20px",
-          boxSizing: "border-box",
-        }}
-      >
-        {visibleProjects.map((project) => (
-          <div
-            key={project.id}
-            style={{
-              borderRadius: 24,
-              background: "#f8fafc",
-              border: "1px solid #f1f5f9",
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              width: "100%", // Ensures it stays in the grid lane
-            }}
-          >
-            {/* IMAGE AREA */}
-            <div style={{ padding: 8 }}>
-              <div style={{ 
-                borderRadius: 18, 
-                overflow: "hidden", 
-                height: 240, 
-                background: "#e2e8f0" 
-              }}>
-                {project.image && (
+          {/* RIGHT: FILTER - Minimal approach */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Filters */}
+            <div className="hidden md:flex items-center gap-1">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setActiveFilter(tag)}
+                  className={`px-4 py-2 text-xs font-light transition-colors duration-200 ${
+                    activeFilter === tag
+                      ? "text-gray-900 bg-gray-100"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  {tag === "all" ? "All" : tag}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Filter Toggle */}
+            <button
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              className="md:hidden flex items-center gap-2 px-4 py-2 text-xs font-light text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Filter size={14} strokeWidth={1.5} />
+              {activeFilter === "all" ? "Filter" : activeFilter}
+            </button>
+          </div>
+        </div>
+
+        {/* PROJECT GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visibleProjects.map((project) => (
+            <div
+              key={project.id}
+              className="group flex flex-col bg-gray-50/50 border border-gray-100/80 overflow-hidden transition-all duration-300 hover:bg-gray-50"
+            >
+              {/* IMAGE */}
+              <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
+                {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-50">
+                    <span className="text-xs font-light text-gray-300">No image</span>
+                  </div>
                 )}
+                
+                {/* Tags overlay on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 bg-white/20 backdrop-blur-sm text-white text-[8px] font-medium uppercase tracking-wider"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* CONTENT AREA */}
-            <div style={{ padding: "16px 20px 24px 20px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0f172a" }}>
+              {/* CONTENT */}
+              <div className="flex-1 flex flex-col p-6">
+                <h3 className="text-lg font-light text-gray-900 tracking-[-0.02em]">
                   {project.title}
                 </h3>
+                
+                <p className="text-sm font-light text-gray-400 leading-relaxed mt-2 flex-1">
+                  {project.description}
+                </p>
+
+                {/* LINKS */}
+                <div className="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                  {project.link?.live && (
+                    <a
+                      href={project.link.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-900 hover:text-gray-500 transition-colors duration-200"
+                    >
+                      {project.link?.text || 'View Project'}
+                      <ArrowUpRight size={12} strokeWidth={2} />
+                    </a>
+                  )}
+                  
+                  {(project.link?.website || project.link?.web_app) && (
+                    <a
+                      href={project.link.website || project.link.web_app}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                    >
+                      Website
+                      <ArrowUpRight size={12} strokeWidth={2} />
+                    </a>
+                  )}
+                </div>
               </div>
+            </div>
+          ))}
+        </div>
 
-              <p style={{ color: "#64748b", lineHeight: 1.6, fontSize: 14, marginBottom: 20 }}>
-                {project.description}
-              </p>
+        {/* EMPTY STATE */}
+        {visibleProjects.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-sm font-light text-gray-400">
+              No projects found for "{activeFilter}"
+            </p>
+            <button
+              onClick={() => setActiveFilter("all")}
+              className="mt-4 text-xs font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              View all projects
+            </button>
+          </div>
+        )}
+      </div>
 
-              {/* ACTION BUTTONS */}
-              <div style={{ display: "flex", gap: 10 }}>
-                {project.link?.live && (
-                  <a
-                    href={project.link.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      flex: 1,
-                      textAlign: "center",
-                      padding: "10px",
-                      borderRadius: 12,
-                      background: "#0f172a",
-                      color: "#fff",
-                      textDecoration: "none",
-                      fontWeight: 600,
-                      fontSize: 13,
+      {/* MOBILE FILTER OVERLAY */}
+      {isFilterOpen && (
+        <div className="fixed inset-0 z-50 bg-white md:hidden">
+          <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+              <span className="text-sm font-light text-gray-600">Filter Projects</span>
+              <button
+                onClick={() => setIsFilterOpen(false)}
+                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <X size={20} strokeWidth={1.5} />
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto p-6">
+              <div className="flex flex-col gap-2">
+                {allTags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => {
+                      setActiveFilter(tag);
+                      setIsFilterOpen(false);
                     }}
+                    className={`flex items-center justify-between py-3 px-4 text-sm font-light transition-colors ${
+                      activeFilter === tag
+                        ? "bg-gray-100 text-gray-900"
+                        : "text-gray-400 hover:text-gray-600"
+                    }`}
                   >
-                  {project?.link?.text ?? 'Get Access'}
-                  </a>
-                )}
-                {(project.link?.website || project.link?.web_app) && (
-                  <a
-                    href={project.link.website || project.link.web_app}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      flex: 1,
-                      textAlign: "center",
-                      padding: "10px",
-                      borderRadius: 12,
-                      background: "#fff",
-                      border: "1px solid #e2e8f0",
-                      color: "#0f172a",
-                      textDecoration: "none",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                                      {project?.link?.text ?? 'Get Access'}
-
-                  </a>
-                )}
+                    <span>{tag === "all" ? "All Projects" : tag}</span>
+                    {activeFilter === tag && (
+                      <span className="w-4 h-px bg-gray-400" />
+                    )}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 };
