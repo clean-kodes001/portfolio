@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { portfolioConfig } from '../config/portfolio';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -15,74 +14,108 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
+  const navItems = ['About', 'Experience', 'Projects', 'Contact'];
+
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 transition-all duration-500">
-      <header 
-        className={`flex items-center justify-between transition-all duration-500 ease-in-out px-6 py-3 ${
-          isScrolled 
-            ? 'w-full md:w-[90%] lg:w-[70%] rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.05)]' 
-            : 'w-full bg-transparent'
+    <>
+      {/* Header container - full width, no elevation */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between h-16">
+            {/* LOGO - Clean typography */}
+            <a href="#" className="group">
+              <span className="text-2xl font-light tracking-[-0.02em] text-gray-900">
+                Miracle
+                <span className="text-gray-300 font-thin ml-0.5">.</span>
+              </span>
+            </a>
+
+            {/* DESKTOP NAV - Pure typography */}
+            <nav className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-sm font-light text-gray-500 hover:text-gray-900 transition-colors duration-200 tracking-wide"
+                >
+                  {item}
+                </a>
+              ))}
+              <span className="w-px h-4 bg-gray-200" />
+              <a
+                href={portfolioConfig.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200 tracking-wide"
+              >
+                Resume
+              </a>
+            </nav>
+
+            {/* MOBILE TRIGGER - Clean icon */}
+            <button
+              className="md:hidden -mr-2 p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* MOBILE OVERLAY - Full screen, no blur, pure content */}
+      <div
+        className={`fixed inset-0 z-40 bg-white transition-opacity duration-500 md:hidden ${
+          mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
-        {/* LOGO AREA */}
-        <div className="flex items-center">
-          <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-slate-900 to-slate-500 bg-clip-text text-transparent">
-            MIRACLE<span className="text-blue-600">.</span>
-          </span>
-        </div>
-        
-        {/* DESKTOP NAV - Minimalist style */}
-        <nav className="hidden md:flex items-center gap-1">
-          {['About', 'Experience', 'Projects', 'Contact'].map((item) => (
-            <a 
-              key={item}
-              href={`#${item.toLowerCase()}`} 
-              className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-all rounded-full hover:bg-slate-100/50"
-            >
-              {item}
-            </a>
-          ))}
-          
-          <div className="w-[1px] h-4 bg-slate-200 mx-2" />
-          
-          <Button asChild variant="ghost" className="rounded-full font-bold text-blue-600 hover:text-blue-700 hover:bg-blue-50">
-            <a href={portfolioConfig.resumeLink} target="_blank" rel="noopener noreferrer">
-              Resume
-            </a>
-          </Button>
-        </nav>
-        
-        {/* MOBILE TRIGGER */}
-        <button 
-          className="md:hidden p-2 rounded-full hover:bg-slate-100 transition-colors"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </header>
+        <div className="flex flex-col items-center justify-center h-full px-6">
+          {/* Mobile nav items - Large, clean typography */}
+          <div className="flex flex-col items-center gap-10">
+            {navItems.map((item, i) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className={`text-4xl font-light tracking-[-0.02em] text-gray-900 hover:text-gray-500 transition-all duration-700 ${
+                  mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
 
-      {/* MOBILE OVERLAY - Full screen blur */}
-      <div className={`fixed inset-0 bg-white/90 backdrop-blur-2xl z-[-1] transition-all duration-500 md:hidden ${
-        mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-      }`}>
-        <nav className="flex flex-col items-center justify-center h-full gap-8">
-          {['About', 'Experience', 'Projects', 'Contact'].map((item, i) => (
-            <a 
-              key={item}
-              href={`#${item.toLowerCase()}`} 
-              className={`text-3xl font-bold tracking-tight transition-all duration-500 ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-              style={{ transitionDelay: `${i * 100}ms` }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
-          <Button asChild size="lg" className="rounded-full px-10">
-            <a href={portfolioConfig.resumeLink} target="_blank" rel="noopener noreferrer">Resume</a>
-          </Button>
-        </nav>
+          {/* Mobile resume link - Clean button */}
+          <a
+            href={portfolioConfig.resumeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-12 text-base font-medium text-blue-600 hover:text-blue-700 transition-all duration-700 ${
+              mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: '320ms' }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Resume →
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
