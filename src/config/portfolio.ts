@@ -133,7 +133,7 @@ about: `⚡ Turn any idea into a working, high-performance app
   projects: [
     {
   id: "jewels-by-brownie",
-  title: "Jewels by Brownie — E-commerce Jewelry Store (2026)",
+  title: "Jewels by Brownie — E-commerce Jewelry Store (CANADA, MANITOBA 2026)",
   description: "A full-featured e-commerce storefront for a jewelry brand. Includes product catalog with categories and collections, cart, multi-step checkout, Stripe payments, order tracking, favorites, reviews, newsletter, and an admin-ready backend.",
   tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "REST API", "Stripe"],
   image: "/jbb-preview.jpeg",
@@ -145,7 +145,7 @@ about: `⚡ Turn any idea into a working, high-performance app
 },
      {
       id: "coinly",
-      title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
+      title: "Coinly Mobile App(Available on Apple AppStore) Abuja, Nigeria - 2024",
       description: "A full-featured mobile app for bill payments, cryptocurrency transactions, buy & sell cryptocurrencies, and more.",
       tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
       image: "/coinly.jpg",
@@ -157,7 +157,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
     {
       id: "Kudipoint",
-      title: "Kudipoint Mobile App(Apk Available) - 2024",
+      title: "Kudipoint Mobile App(Apk Available) Niger, Nigeria - 2024",
       description: "A full-featured mobile app for sending and receiving money nationwide, and more. CONTACT ME @ 08146360057(Whatsapp) FOR APK FILE. APP UNDER REVIEW ON APPSTORE AND PLAYSTORE",
       tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
       image: "/Gemini_Generated_Image_z3ma1sz3ma1sz3ma.jpg",
@@ -169,7 +169,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
     {
       id: "vendoor",
-      title: "Vendoor Multipurpose Buy/Sell E-commerce  - 2026",
+      title: "Vendoor Multipurpose Buy/Sell E-commerce - Niger, Abuja - 2026",
       description: "A web-based multipurpose e-commerce platform for vendors and buyers, connecting noth buyers and sellers seamlessly...",
       tags: ["NextJs","Nodejs"],
       image: "/IMG-20260421-WA0003.jpg",
@@ -181,7 +181,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
      {
        id: "drone",
-title: "Military Drone DJI Software(2023)",
+title: "Military Drone DJI Software(2023), Lagos, Nigeria",
 description: "A full-featured mobile app for low-cost, nation-wide DJI drone monitoring, tracking, and remote control.",
 tags: ["JAVA", "Websocket", "Nodejs"],
 image: "/IMG_1324-1024x576.jpg",
@@ -196,7 +196,7 @@ note: "Reach out to discuss access and implementation details for secure drone o
    
     {
       id: "swift",
-      title: "Swift Ride (2025) - IOS & Android (New App Built, Old app deprecated)",
+      title: "Swift Ride (2025) - IOS & Android. Niger, Nigeria (New App Built, Old app deprecated)",
       description: "A full-featured mobile app for booking ride within Nigeria.",
       tags: ["React Native", "EXPO", "MYSQL", "Pusher", "Laravel"],
       image: "/Screenshot_21-1-2026_172524_play.google.com.jpeg",
@@ -208,7 +208,7 @@ note: "Reach out to discuss access and implementation details for secure drone o
     },
     {
       id: "maize-farm-disease-detector",
-      title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases (2024)",
+      title: "Intelligent A.I Hardware System for Detecting and Curing Maize Crop Diseases - FINAL YEAR PROJECT (2024)",
       description: "A smart, AI-powered physical system designed to detect and treat maize leaf diseases such as blight, rust, and leaf spot. The system integrates computer vision, Raspberry Pi, and chemical spraying actuators to automatically identify infected maize leaves using a trained AI model and apply targeted treatment through controlled chemical dispensing.",
       tags: ["Raspberry PI", "Python3", "Sci-kit learn", "M.L", "A.I"],
       image: "/Screenshot_5-3-2026_12641_portfolio-zeta-nine-fqlbdmabv0.vercel.app.jpeg",
@@ -222,7 +222,7 @@ note: "Reach out to discuss access and implementation details for secure drone o
     },
     {
       id: "ghost",
-      title: "Ghost Team Developer Dashboard(2023)",
+      title: "Ghost Team Developer Dashboard. NY, U.S.A (2023)",
       description: "A platform interface designed to help developers collaborate on different projects in realtime",
       tags: ["Reactjs", "Tailwind CSS", "PostgreSQL"],
       image: "/Screenshot_3-7-2025_72836_ghost-vert.vercel.app.jpeg",
