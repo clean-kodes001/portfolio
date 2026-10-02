@@ -61,6 +61,7 @@ email: "anoibidickson@gmail.com",
 location: "Abuja, Nigeria",
 bio: `Full-Stack Software Engineer turning ideas into real, scalable web & mobile apps since 2019.  
 | React • React Native • Node.js • PHP • Java  
+| Payment Gateway Integration • Stripe • Paystack • Flutterwave • B2C APIs  
 | JavaScript • TypeScript • HTML • CSS • Bootstrap  
 | MySQL • PostgreSQL • REST APIs • API Integration  
 | Git • Docker • AWS • CI/CD • Linux`,
