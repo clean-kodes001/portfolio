@@ -136,7 +136,7 @@ about: `⚡ Turn any idea into a working, high-performance app
   title: "Jewels by Brownie — E-commerce Jewelry Store (2026)",
   description: "A full-featured e-commerce storefront for a jewelry brand. Includes product catalog with categories and collections, cart, multi-step checkout, Stripe payments, order tracking, favorites, reviews, newsletter, and an admin-ready backend.",
   tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "REST API", "Stripe"],
-  image: "/jbb-preview.jpg",
+  image: "/jbb-preview.jpeg",
   link: {
     website: "https://jewelsbybrownie.com",
     text: "Visit store"
