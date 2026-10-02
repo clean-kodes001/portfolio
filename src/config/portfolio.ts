@@ -131,6 +131,18 @@ about: `⚡ Turn any idea into a working, high-performance app
 
   // Projects
   projects: [
+    {
+  id: "jewels-by-brownie",
+  title: "Jewels by Brownie — E-commerce Jewelry Store (2026)",
+  description: "A full-featured e-commerce storefront for a jewelry brand. Includes product catalog with categories and collections, cart, multi-step checkout, Stripe payments, order tracking, favorites, reviews, newsletter, and an admin-ready backend.",
+  tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "REST API", "Stripe"],
+  image: "/jbb-preview.jpg",
+  link: {
+    website: "https://jewelsbybrownie.com",
+    text: "Visit store"
+  },
+  featured: true
+},
      {
       id: "coinly",
       title: "Coinly Mobile App(Available on Apple AppStore) - 2024",
