@@ -34,7 +34,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <section className="min-h-screen bg-white py-24">
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           {/* LEFT: TITLE */}
@@ -45,11 +45,11 @@ const ProjectsSection: React.FC = () => {
                 Projects
               </span>
             </div>
-            
+
             <h2 className="text-5xl md:text-6xl font-light tracking-[-0.03em] text-gray-900 leading-[0.9]">
               Selected <span className="font-normal">Works</span>
             </h2>
-            
+
             <p className="text-sm text-gray-500 max-w-md leading-relaxed">
               "To protect intellectual property, I only showcase projects where explicit{' '}
               <span className="text-gray-700 font-medium">client consent</span> has been granted."
@@ -89,7 +89,7 @@ const ProjectsSection: React.FC = () => {
           {visibleProjects.map((project) => (
             <div
               key={project.id}
-              className="group flex flex-col bg-gray-50/50 border border-gray-100/80 overflow-hidden transition-all duration-300 hover:bg-gray-50"
+              className="group flex flex-col bg-white border border-gray-200/80 rounded-2xl overflow-hidden transition-all duration-300 hover:border-gray-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
             >
               {/* IMAGE */}
               <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
@@ -104,31 +104,35 @@ const ProjectsSection: React.FC = () => {
                     <span className="text-xs font-light text-gray-300">No image</span>
                   </div>
                 )}
-                
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex flex-wrap gap-1.5">
+              </div>
+
+              {/* CONTENT */}
+              <div className="flex-1 flex flex-col p-6">
+                {/* TITLE */}
+                <h3 className="text-lg font-medium text-gray-900 tracking-[-0.02em]">
+                  {project.title}
+                </h3>
+
+                {/* ALWAYS-VISIBLE TAGS — Apple-style chips */}
+                {project.tags && project.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-3">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-[10px] font-medium uppercase tracking-wider"
+                        className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider text-gray-700 bg-gray-100/80 border border-gray-200/70"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                </div>
-              </div>
+                )}
 
-              {/* CONTENT */}
-              <div className="flex-1 flex flex-col p-6">
-                <h3 className="text-lg font-medium text-gray-900 tracking-[-0.02em]">
-                  {project.title}
-                </h3>
-                
-                <p className="text-sm text-gray-500 leading-relaxed mt-2 flex-1">
+                {/* DESCRIPTION */}
+                <p className="text-sm text-gray-500 leading-relaxed mt-4 flex-1">
                   {project.description}
                 </p>
 
+                {/* LINKS */}
                 <div className="flex items-center gap-6 mt-6 pt-4 border-t border-gray-100">
                   {project.link?.live && (
                     <a
@@ -141,7 +145,7 @@ const ProjectsSection: React.FC = () => {
                       <ArrowUpRight size={14} strokeWidth={2} />
                     </a>
                   )}
-                  
+
                   {(project.link?.website || project.link?.web_app) && (
                     <a
                       href={project.link.website || project.link.web_app}
@@ -188,7 +192,7 @@ const ProjectsSection: React.FC = () => {
                 <X size={20} strokeWidth={1.5} />
               </button>
             </div>
-            
+
             <div className="flex-1 overflow-y-auto p-6">
               <div className="flex flex-col gap-1">
                 {allTags.map((tag) => (
@@ -198,7 +202,7 @@ const ProjectsSection: React.FC = () => {
                       setActiveFilter(tag);
                       setIsFilterOpen(false);
                     }}
-                    className={`flex items-center justify-between py-4 px-4 text-sm font-medium transition-colors ${
+                    className={`flex items-center justify-between py-4 px-4 text-sm font-medium transition-colors rounded-xl ${
                       activeFilter === tag
                         ? "bg-gray-100/80 text-gray-900"
                         : "text-gray-400 hover:text-gray-600"
