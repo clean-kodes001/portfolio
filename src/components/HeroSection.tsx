@@ -90,7 +90,7 @@ const HeroSection = () => {
                     Education
                   </p>
                   <p className="text-xs font-medium text-gray-800 truncate">
-                    B.Tech Computer Science
+                    B.Tech Computer Science (Graduated) 
                   </p>
                   <p className="text-xs text-gray-500 truncate">
                     FUT Minna
