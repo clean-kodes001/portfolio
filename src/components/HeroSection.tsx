@@ -108,7 +108,7 @@ const HeroSection = () => {
                     Open to Relocation
                   </p>
                   <p className="text-xs text-gray-500">
-                    Lafia, Nasarawa
+                    Abuja, Nigeria
                   </p>
                 </div>
               </div>
