@@ -1,5 +1,3 @@
-
-
 export interface Skill {
   name: string;
   level: number; // 1-5 or 1-100
@@ -50,6 +48,10 @@ export interface Education {
   startDate: string;
   endDate: string | "Present";
   description?: string;
+  credentialId?: string;
+  verificationUrl?: string;
+  image?: string;
+  skills?: string[];
 }
 
 // Main configuration for the portfolio
@@ -70,7 +72,8 @@ about: `⚡ Turn any idea into a working, high-performance app
 ⚡ React • React Native • Node.js • PHP • Java  
 ⚡ JavaScript • TypeScript • HTML • CSS • Bootstrap  
 ⚡ MySQL • PostgreSQL • REST APIs • API Integration  
-⚡ Git • Docker • AWS • CI/CD • Linux`,
+⚡ Git • Docker • AWS • CI/CD • Linux  
+⚡ Certified in AI Agent Evaluation (Mercor, 2026)`,
   resumeLink: "/Anoibi_Dickson_Miracle_Software_Engineer.pdf",
 
   // Social Links
@@ -106,7 +109,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
     {
       category: "Tools & Others",
-      items: ["Git", "Docker", "AWS", "Figma", "Jest", "CI/CD"],
+      items: ["Git", "Docker", "AWS", "Figma", "Jest", "CI/CD", "AI Agent Evaluation"],
     },
   ],
 
@@ -253,6 +256,18 @@ note: "Reach out to discuss access and implementation details for secure drone o
       startDate: "Jan 2017",
       endDate: "Present",
       description: "Intensive program covering modern web development technologies."
+    },
+    {
+      degree: "Introduction to Agents",
+      institution: "Mercor",
+      location: "Online",
+      startDate: "Oct 2026",
+      endDate: "Oct 2026",
+      description: "Successfully completed the 'Introduction to Agents' course, demonstrating rigor, calibration, and clarity in AI agent evaluation. Passed with 13/13 lessons completed.",
+      credentialId: "MRC-2026-MKH397X8",
+      verificationUrl: "https://work.mercor.com/learn/verify/MRC-2026-MKH397X8",
+      image: "/mercor-certificate.jpg",
+      skills: ["AI Agent Evaluation", "Rigor", "Calibration", "Clarity", "AI Safety"]
     }
   ] as Education[],
 
