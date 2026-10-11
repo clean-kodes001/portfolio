@@ -105,16 +105,16 @@ const ProjectsSection: React.FC = () => {
               key={project.id}
               className="group flex flex-col bg-gray-50 rounded-3xl overflow-hidden"
             >
-              {/* IMAGE */}
-              <div className="relative aspect-[4/3] bg-gray-200 overflow-hidden">
+              {/* IMAGE — full image, never cropped */}
+              <div className="relative w-full bg-white flex items-center justify-center p-4">
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-56 object-contain group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                  <div className="w-full h-56 flex items-center justify-center bg-gray-100 rounded-2xl">
                     <span className="text-xs font-medium text-gray-400">
                       No image
                     </span>
@@ -229,9 +229,7 @@ const ProjectsSection: React.FC = () => {
                       }`}
                     >
                       <span>{tag === "all" ? "All Projects" : tag}</span>
-                      {isActive && (
-                        <span className="w-5 h-px bg-white" />
-                      )}
+                      {isActive && <span className="w-5 h-px bg-white" />}
                     </button>
                   );
                 })}
