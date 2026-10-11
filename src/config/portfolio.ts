@@ -136,6 +136,18 @@ about: `⚡ Turn any idea into a working, high-performance app
   // Projects
   projects: [
     {
+      id: "awadoc",
+      title: "Awadoc Mobile App — UI Rebuild (2026)",
+      description: "Contracted to build a brand-new UI for the Awadoc app. Translated Figma designs into a pixel-perfect, production-ready React Native frontend.",
+      tags: ["React Native", "TypeScript", "Figma", "UI/UX"],
+      image: "/awadoc.jpg",
+      link: {
+        website: "https://www.awadoc.com/",
+        text: 'Visit website'
+      },
+      featured: true
+    },
+    {
   id: "jewels-by-brownie",
   title: "Jewels by Brownie — E-commerce Jewelry Store (CANADA, MANITOBA 2026)",
   description: "A full-featured e-commerce storefront for a jewelry brand. Includes product catalog with categories and collections, cart, multi-step checkout, Stripe payments, order tracking, favorites, reviews, newsletter, and an admin-ready backend.",
@@ -159,18 +171,7 @@ about: `⚡ Turn any idea into a working, high-performance app
       },
       featured: true
     },
-    {
-      id: "Kudipoint",
-      title: "Kudipoint Mobile App(Apk Available) Niger, Nigeria - 2024",
-      description: "A full-featured mobile app for sending and receiving money nationwide, and more. CONTACT ME @ 08146360057(Whatsapp) FOR APK FILE. APP UNDER REVIEW ON APPSTORE AND PLAYSTORE",
-      tags: ["React Native", "PHP", "MYSQL", "TypeScript", "HTML5", "CSS3"],
-      image: "/Gemini_Generated_Image_z3ma1sz3ma1sz3ma.jpg",
-      link: {
-        website: "https://wa.me/+2348146360057",
-        text: 'Get APK file'
-      },
-      featured: true
-    },
+    
     {
       id: "vendoor",
       title: "Vendoor Multipurpose Buy/Sell E-commerce - Niger, Abuja - 2026",
