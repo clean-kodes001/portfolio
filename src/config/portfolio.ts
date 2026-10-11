@@ -137,7 +137,7 @@ about: `⚡ Turn any idea into a working, high-performance app
   projects: [
     {
       id: "awadoc",
-      title: "Awadoc Mobile App — UI Rebuild (2026)",
+      title: "Awadoc Mobile App — UI Rebuild (2026 - Remote) (On Playstore & Appstore)",
       description: "Contracted to build a brand-new UI for the Awadoc app. Translated Figma designs into a pixel-perfect, production-ready React Native frontend.",
       tags: ["React Native", "TypeScript", "Figma", "UI/UX"],
       image: "/awadoc.jpeg",
