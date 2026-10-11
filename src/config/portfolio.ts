@@ -88,7 +88,7 @@ about: `⚡ Turn any idea into a working, high-performance app
     },
     {
       name: "GitHub",
-      url: "https://github.com/Dickson2020",
+      url: "https://github.com/clean-kodes001",
       icon: "github"
     },
     {name: "Whatsapp",
