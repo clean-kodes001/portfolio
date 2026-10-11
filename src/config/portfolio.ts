@@ -140,7 +140,7 @@ about: `⚡ Turn any idea into a working, high-performance app
       title: "Awadoc Mobile App — UI Rebuild (2026)",
       description: "Contracted to build a brand-new UI for the Awadoc app. Translated Figma designs into a pixel-perfect, production-ready React Native frontend.",
       tags: ["React Native", "TypeScript", "Figma", "UI/UX"],
-      image: "/awadoc.jpg",
+      image: "/awadoc.jpeg",
       link: {
         website: "https://www.awadoc.com/",
         text: 'Visit website'
